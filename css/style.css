@@ -6,6 +6,16 @@
 	box-sizing: border-box;
 }
 
+[class*="col-"]{
+	float: left;
+	box-sizing: border-box;
+	border: 1px solid rgb(255, 0, 0);
+}
+
+.aside-menu{
+	height: 100%;
+}
+
 /* Fórmula columnas: n*100 / 12 */
 .col-12 {width: 100%;}
 .col-11 {width: 91.666666667%;}
@@ -19,4 +29,4 @@
 .col-3 {width: 25%;}
 .col-2 {width: 16.66666666667%}
 .col-1 {width: 8.333333333333%;}
-.col-minus {width: 1%;}
+.col-minus {width: 4%;}
