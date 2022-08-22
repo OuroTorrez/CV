@@ -5,60 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>My CV</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 </html>
 
 <body>
-    <header class="col-12 header"><img
-            src="https://th.bing.com/th/id/R.75a4c2d1dc2dbce3342109e8270ff4f3?rik=MwNxzquLpLz5eQ&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f07%2fSwiss-the-Lauterbrunnen-landscape-pictures-desktop-wallpaper-1920x1080.jpg&ehk=Q95657CDU6V3%2fRkUhDRBhc0SePWCW4IM14h1NJvYmPg%3d&risl=&pid=ImgRaw&r=0"
-            width="100%" height="100%"></header>
-    <aside class="col-1 aside-menu centerItems">menu</aside>
-    <section class="col-11">
-        <div class="col-12">
-            <h1>Hello, I'm Adrian</h1>
-            <span>Videogame developer</span>
+    <!-- Header -->
+    <header class="col-12 header">
+        <div class="col-12 headerimg">
+            
         </div>
-        <div class="col-12 centerItems">
-            <div class="col-3">
-                <h1>Skill</h1>
-                <span>Descripción de la habilidad</span>
+
+    </header>
+
+    <!-- Content -->
+    <section class="col-12 content">
+        <!--- Menu -->
+        <aside class="col-1 aside-menu centerItems">
+            menu
+        </aside>
+
+        <!--- Article -->
+        <article class="col-11">
+            <div class="col-12">
+                <h1>Hello, I'm Adrian</h1>
+                <span>Videogame developer</span>
             </div>
-            <div class="col-3">
-                <h1>Skill</h1>
-                <span>Descripción de la habilidad</span>
+            <div class="col-12 centerItems">
+                <div class="col-3">
+                    <h1>Skill</h1>
+                    <span>Descripción de la habilidad</span>
+                </div>
+                <div class="col-3">
+                    <h1>Skill</h1>
+                    <span>Descripción de la habilidad</span>
+                </div>
             </div>
-        </div>
+        </article>
+
+        <!--- Footer -->
+        <footer class="col-12">
+            <div class="col-2">
+                <ul>
+                    <li>
+                        <a href="">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="">Link 3</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4 centerItems centerText">
+                <span>Adrian Torrez Beltran<br>2022</span>
+            </div>
+            <div class="col-6">
+                <h1>Contáctame</h1>
+                <form>
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Correo">
+                    <input type="text" placeholder="Mensaje">
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </footer>
+
     </section>
-    <footer class="col-12">
-        <div class="col-2">
-            <ul>
-                <li>
-                    <a href="">Link 1</a>
-                </li>
-                <li>
-                    <a href="">Link 2</a>
-                </li>
-                <li>
-                    <a href="">Link 3</a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-4 centerItems centerText">
-            <span>Adrian Torrez Beltran<br>2022</span>
-        </div>
-        <div class="col-6">
-            <h1>Contáctame</h1>
-            <form>
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Correo">
-                <input type="text" placeholder="Mensaje">
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-    </footer>
 </body>
 
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+    integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $('.sd').click(function () {
+        $('.header, .content').addClass('scrolled');
+    });
+
+    $('.header').mousewheel(function (e) {
+        if (e.deltaY < 0) {
+            $('.header, .content').addClass('scrolled');
+            return false;
+        }
+    });
+    $(window).mousewheel(function (e) {
+        if ($('.header.scrolled').length) {
+            if ($(window).scrollTop() == 0 && e.deltaY > 0) {
+                $('.header, .content').removeClass('scrolled');
+            }
+        }
+    });
+</script>
