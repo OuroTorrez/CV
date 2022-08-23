@@ -19,11 +19,27 @@
 	position: relative;
 }
 
+.headertitle {
+	color: #fff;
+	font-size: 60px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
 /* Grid variations */
-.centerItems{
-	display: flex; 
-	align-items: center; 
+.centerItems {
+	display: flex;
+	justify-items: center;
+	align-items: center;
+}
+
+.relativeCenterItemsY{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 	justify-content: center;
+	align-items: center;
 }
 
 .centerText{
