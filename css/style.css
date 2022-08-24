@@ -27,8 +27,30 @@
 	letter-spacing: 5px;
 }
 
+.headersub{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: capitalize;
+	letter-spacing: 5px;
+}
+
+.sd{
+	color: #fff;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.sd:hover, .sd:focus{
+	color: #fff;
+	opacity: .7;
+	text-decoration: none;
+}
+
 /* Grid variations */
 .centerItems {
+	position: relative;
 	display: flex;
 	justify-items: center;
 	align-items: center;
