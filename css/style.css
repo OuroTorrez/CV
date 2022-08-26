@@ -27,12 +27,24 @@
 	letter-spacing: 5px;
 }
 
+.headertitle::first-letter {
+	font-size: 80px;
+	text-transform: uppercase;
+	color: red;
+}
+
 .headersub{
 	color: #fff;
 	font-size: 20px;
 	font-weight: 600;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	letter-spacing: 5px;
+}
+
+.headersub::first-letter {
+	font-size: 25px;
+	text-transform: uppercase;
+	color: red;
 }
 
 .sd{
@@ -46,6 +58,13 @@
 	color: #fff;
 	opacity: .7;
 	text-decoration: none;
+}
+
+.linkIcons{
+	color: #fff;
+	font-size: 30px;
+	letter-spacing: 10px;
+	transition: .5s;
 }
 
 /* Grid variations */
