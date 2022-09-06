@@ -114,7 +114,9 @@ section {
 	width: 8.333333333333333%;
 }
 
+
 .asideList li {
+	overflow: hidden;
 	list-style: none;
 	padding: 10px;
 	border-radius: 5px;
@@ -124,6 +126,8 @@ section {
 }
 
 .asideIcon {
+	position: relative;
+	right: 0px;
 	font-size: 25px;
 }
 
