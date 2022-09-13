@@ -89,6 +89,14 @@ body, main, footer {
 	justify-content: space-evenly;
 }
 
+content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-width: 90%;
+}
+
 article {
 	padding: 10px;
 	border-radius: 5px;
@@ -101,13 +109,14 @@ section {
 }
 
 .asideMenu {
-	display: inline-block;
 	border-radius: 5px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 	padding: 20px;
 	height: 100%;
 	transition: .5s ease-out;
 	background-color: #fff;
+	position: relative;
+	z-index: 1;
 }
 
 .asideMenu:hover {
