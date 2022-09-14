@@ -109,16 +109,25 @@ section {
 }
 
 #backgroundMenu {
-	background-color: rgba(170, 0, 0, 0.492);
 	height: 100%;
 	position: absolute;
 	top: 0;
 	z-index: 1;
 }
 
+.backgroundMenu {
+	background-color: rgba(0, 0, 0, 0);
+	transition: .2s ease-in;
+}
+
+.backgroundMenuHover {
+	background-color: rgba(1, 1, 1, 0.7);
+	transition: .2s ease-in;
+}
+
 #asideMenu {
 	display: inline;
-	border-radius: 5px;
+	border-radius: 0px 5px 5px 0px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 	padding: 20px;
 	height: 100%;
@@ -143,6 +152,19 @@ section {
 	display: block;
 	padding: 10px;
 	color: #000;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.asideLink::first-letter {
+	font-size: 20px;
+}
+
+.asideLink:hover {
+	color: #000;
+	opacity: .7;
+	text-decoration: none;
 }
 
 .asideIcon {
