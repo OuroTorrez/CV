@@ -126,6 +126,7 @@ section {
 }
 
 #asideMenu {
+	width: 1px;
 	display: inline;
 	border-radius: 0px 5px 5px 0px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -145,11 +146,11 @@ section {
 
 .asideList {
 	overflow: hidden;
-	margin: 5px 0px;
+	margin: 15px 0px;
 }
 
 .asideLink {
-	display: block;
+	display: inline;
 	padding: 10px;
 	color: #000;
 	text-transform: uppercase;
@@ -162,14 +163,16 @@ section {
 }
 
 .asideLink:hover {
+	transition: .1s ease-in;
 	color: #000;
 	opacity: .7;
 	text-decoration: none;
 }
 
 .asideIcon {
-	position: relative;
-	right: 0px;
+	position: absolute;
+	right: -15px;
+	top: 10px;
 	font-size: 25px;
 }
 
