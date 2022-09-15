@@ -118,25 +118,27 @@ section {
 .backgroundMenu {
 	background-color: rgba(0, 0, 0, 0);
 	transition: .2s ease-in;
+	pointer-events: none;
 }
 
 .backgroundMenuHover {
 	background-color: rgba(1, 1, 1, 0.7);
 	transition: .2s ease-in;
+	pointer-events: none;
 }
 
 #asideMenu {
+	pointer-events: all;
 	width: 1px;
 	display: inline;
 	border-radius: 0px 5px 5px 0px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 	padding: 20px;
-	height: 100%;
+	height: 90%;
 	transition: .5s ease-out;
 	background-color: #fff;
 	position: absolute;
-	top: 0;
-	z-index: 1;
+	z-index: 2;
 }
 
 #asideMenu:hover {
@@ -167,13 +169,6 @@ section {
 	color: #000;
 	opacity: .7;
 	text-decoration: none;
-}
-
-.asideIcon {
-	position: absolute;
-	right: -15px;
-	top: 10px;
-	font-size: 25px;
 }
 
 footer {
