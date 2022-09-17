@@ -39,9 +39,11 @@
 
     <!-- Main -->
     <main class="col-12">
+
         <!--- Menu -->
+        <div class="col-12 backgroundMenu" id="backgroundMenu">
+
         <aside class="relativeCenterItemsY" id="asideMenu">
-                
             <div class="col-12 relativeCenterItemsY centerText" style="float: left;">
                 <div class="col-12 asideList">
                     <span><a href="#" class="asideLink">About</a></span>
@@ -64,32 +66,49 @@
             </div>
         </aside>
 
-        <div class="col-12 backgroundMenu" id="backgroundMenu">
-
-            
-
         </div>
         
 
         <!--- Content -->
         <content class="col-12" style="float: right;">
-            <!--- About me -->
-            <section class="col-12 centerItems contentArticle">
-                <article class="col-10 centerText">
+
+            <!-- About -->
+            <div class="pic-ctn">
+                <img src="https://images.hdqwalls.com/download/cat-looking-at-butterfly-digital-art-w5-1920x1080.jpg" alt="" class="pic">
+                <img src="https://wallpapercave.com/wp/wp3492729.jpg" alt="" class="pic">
+                <img src="https://i.redd.it/ck8qnnh2v0h81.png" alt="" class="pic">
+                <img src="https://wallpaperaccess.com/full/253599.jpg" alt="" class="pic">
+                <img src="https://i.pinimg.com/originals/d8/8f/f6/d88ff65735a13bb3a95db0575278f960.jpg" alt="" class="pic">
+                <!--- About me -->
+            <section class="col-12 centerItems contentArticle" id="AboutMe">
+                <article class="col-7 centerText">
                     <div class="col-12">
                         <h1>Hello, I'm Adrian</h1>
                         <span>Novice video game developer for Unity and Unreal Engine with about 7 years of programming training. 
                             Specialized on Unity and Unreal Engine with full-stack web development knowledge using HTML, JS, PHP and CSS among other programming languages like C++, C# and Java. 
                             Used to Git management and teamwork flows. Enthusiastic and fast learner.</span>
                     </div>
-                    
                 </article>
             </section>
+            </div>
+            
+            
             <!--- Skills -->
-            <section class="col-12 centerItems contentArticle">
-                <article class="col-3">
-                    <h1>Skill</h1>
-                    <span>Descripción de la habilidad</span>
+            <section class="col-12 centerItems contentArticle" id="Skills">
+                
+                <article class="col-3 SkillSquare">
+                    <h1>Unity</h1>
+                    <span>Expertise with the Unity editor and it's tools. On 3D, 2D and mobile project exporting.</span>
+                    <br>
+                    <div class="col-12 centerItems">
+                        <span class="barText">Novice</span>
+                        <span class="barText">Expert</span>
+                    </div>
+                    <div class="progressBar">
+                        <span class="bar">
+                          <span class="progress" style="width: 50%;"></span>
+                        </span>
+                    </div>
                 </article>
                 <article class="col-3">
                     <h1>Skill</h1>
@@ -99,6 +118,13 @@
                     <h1>Skill</h1>
                     <span>Descripción de la habilidad</span>
                 </article>
+                <!--
+                <div class="ocean">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                  </div>
+                  -->
             </section>
         </content>
 
@@ -167,6 +193,5 @@
         $('#backgroundMenu').removeClass('backgroundMenuHover');
         $('#backgroundMenu').addClass('backgroundMenu');
     });
-    
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
