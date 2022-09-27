@@ -17,7 +17,6 @@ body, main, footer {
 	list-style: none;
 	text-decoration: none;
 	box-sizing: border-box;
-	border: 1px solid red;
 }
 
 /* Styles */
@@ -287,7 +286,31 @@ img:nth-child(5) {
 */
 
 #Skills {
-	height: 100vh;
+	margin-top: 50px;
+}
+
+.SkillBox {
+	padding: 10px 25px;
+}
+
+.SkillBar {
+	margin-top: 15px;
+}
+
+.SkillTitle {
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.SkillTitle::first-letter {
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.SkillText {
+	text-align: justify;
+	text-align-last: center;
 }
 
 .progressBar {
@@ -299,27 +322,14 @@ img:nth-child(5) {
 .progressBar span {
 	display: block;
 }
-  
+
 .bar {
 	background: rgba(0, 0, 0, 0.2);
 }
-  
+
 .progress {
 	background: #212121;
 	padding: 5px;
-}
-
-.barText:nth-of-type(even) {
-	display: inline;
-	justify-items: right;
-	text-align: right;
-	right: 0;
-	align-items: right;
-	color: red;
-}
-
-.SkillSquare .barText span:nth-of-type(odd) {
-	display: inline;
 }
 
 footer {
