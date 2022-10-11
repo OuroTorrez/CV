@@ -290,7 +290,14 @@ img:nth-child(5) {
 }
 
 .SkillBox {
+	display: fixed;
 	padding: 10px 25px;
+	width: 350px;
+	min-width: 350px;
+	max-width: 350px;
+	height: 200px;
+	min-height: 200px;
+	max-height: 200px;
 }
 
 .SkillBar {
@@ -314,9 +321,11 @@ img:nth-child(5) {
 }
 
 .progressBar {
+	position: relative;
 	border-radius: 60px;
 	overflow: hidden;
 	width: 100%;
+	float: bottom;
 }
 
 .progressBar span {
@@ -373,7 +382,7 @@ main {
 [class*="col-"] {
 	float: left;
 	box-sizing: border-box;
-	/*border: 1px solid rgb(255, 0, 0);*/
+	/* border: 1px solid rgb(255, 0, 0); */
 }
 
 [class*="col_"] {
