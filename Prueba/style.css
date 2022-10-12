@@ -31,9 +31,18 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
     width: 100%;
     height: 100vh;
+    
+    position: fixed;
+    top: 0;
+	z-index: 9;
+	transition: all .6s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#Header.scrolled {
+	transform: translate3d(0, -100%, 0) scale(.75);
+	opacity: 0;
 }
 
 #Header #HeaderTitle {
@@ -42,7 +51,8 @@ body {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 #HeaderTitle span {
@@ -65,6 +75,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 5px;
     text-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    margin: 0;
 }
 
 #HeaderSubtitle::first-letter {
@@ -79,13 +90,105 @@ body {
 	text-shadow: rgb(0, 0, 0) 0px 0px 20px;
 }
 
-#SD a{
-    display: absolute;
-    top: 0%;
-    flex-direction: column;
-    align-self: flex-end;
-    justify-content: flex-end;
-    align-items: flex-end;
-    color: #fff;
-    text-decoration: none;
+#SD {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
 }
+
+#SD a span{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600px;
+    font-size: 15px;
+    text-shadow: rgb(0, 0, 0) 0px 0px 10px;
+}
+
+#SD a span::first-letter {
+    font-size: 20px;
+}
+
+/* Content styles */
+#Content {
+    position: relative;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+
+	transition: all .6s cubic-bezier(0.86, 0, 0.07, 1);
+	transform: translate3d(0, 20px, 0) scale(.75);
+    opacity: 0;
+}
+
+#Content.scrolled {
+	transform: translate3d(0, 0, 0) scale(1);
+	opacity: 1;
+}
+
+/* Slider */
+@keyframes display {
+	0% {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+
+	10% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	20% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	30% {
+		transform: translateX(-200px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(-200px);
+		opacity: 0;
+	}
+}
+
+#Slider {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#Slider>img {
+	position: absolute;
+	opacity: 0;
+	animation: display 10s infinite;
+	min-width: 100%;
+	min-height: 100vh;
+	filter: blur(5px);
+}
+
+img:nth-child(2) {
+	animation-delay: 2s;
+}
+
+img:nth-child(3) {
+	animation-delay: 4s;
+}
+
+img:nth-child(4) {
+	animation-delay: 6s;
+}
+
+img:nth-child(5) {
+	animation-delay: 8s;
+}
+
+/* Header hero style */
+/* Copyright (c) 2017 by verdzik (http://codepen.io/verdzik/pen/PPEXao) */
