@@ -15,7 +15,7 @@ span, p, ul, li, i {
 
 body * {
     box-sizing: border-box;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 body {
     margin: 0;
@@ -33,6 +33,8 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
+    margin: 0;
+    padding: 0;
     
     position: fixed;
     top: 0;
@@ -117,8 +119,6 @@ body {
     top: 0;
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100vh;
 
 	transition: all .6s cubic-bezier(0.86, 0, 0.07, 1);
 	transform: translate3d(0, 20px, 0) scale(.75);
@@ -158,19 +158,28 @@ body {
 	}
 }
 
-#Slider {
+.pic-ctn {
 	position: relative;
+    top: 0;
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    z-index: 0;
 }
 
-#Slider>img {
+.pic-ctn>img {
 	position: absolute;
 	opacity: 0;
 	animation: display 10s infinite;
 	min-width: 100%;
+    max-width: 100%;
 	min-height: 100vh;
+    max-height: 100vh;
 	filter: blur(5px);
 }
 
@@ -190,5 +199,20 @@ img:nth-child(5) {
 	animation-delay: 8s;
 }
 
+/* Page styles */
+.Article {
+    background-color: red;
+}
+
+#AboutArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 700px;
+    height: 350px;
+    z-index: 1;
+}
 /* Header hero style */
 /* Copyright (c) 2017 by verdzik (http://codepen.io/verdzik/pen/PPEXao) */
