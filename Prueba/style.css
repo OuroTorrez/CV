@@ -115,6 +115,8 @@ body {
 
 /* Content styles */
 #Content {
+    display: flex;
+    flex-direction: column;
     position: relative;
     top: 0;
     padding: 0;
@@ -200,8 +202,11 @@ img:nth-child(5) {
 }
 
 /* Page styles */
-.Article {
-    background-color: red;
+article {
+    padding: 10px;
+	border-radius: 5px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	background-color: #fff;
 }
 
 #AboutArticle {
@@ -209,10 +214,85 @@ img:nth-child(5) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: red;
-    width: 700px;
-    height: 350px;
+    min-width: 800px;
+    max-width: 800px;
+    min-width: 250px;
+    max-height: 250px;
     z-index: 1;
 }
+
+#AboutArticle h1 {
+    color: #000;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: #000 0px 0px 10px;
+}
+
+#AboutArticle p{
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: justify;
+    text-align-last: center;
+    padding: 0px 15px;
+}
+
+#SkillsSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+}
+
+.Skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 180px;
+    margin: 10px 25px;
+}
+
+.SkillTitle {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: #000 0px 0px 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.progressBar {
+	position: relative;
+	border-radius: 60px;
+	overflow: hidden;
+	width: 100%;
+	float: bottom;
+}
+
+.progressBar span {
+	display: block;
+}
+
+.bar {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.progress {
+	background: #212121;
+	padding: 5px;
+}
+
 /* Header hero style */
 /* Copyright (c) 2017 by verdzik (http://codepen.io/verdzik/pen/PPEXao) */
