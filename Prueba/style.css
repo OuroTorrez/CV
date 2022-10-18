@@ -39,7 +39,7 @@ body {
     position: fixed;
     top: 0;
 	z-index: 9;
-	transition: all .6s cubic-bezier(0.86, 0, 0.07, 1);
+	transition: transform .6s cubic-bezier(0.86, 0, 0.07, 1), opacity .6s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 #Header.scrolled {
@@ -122,14 +122,66 @@ body {
     padding: 0;
     margin: 0;
 
-	transition: all .6s cubic-bezier(0.86, 0, 0.07, 1);
-	transform: translate3d(0, 20px, 0) scale(.75);
+	transition: transform .6s cubic-bezier(0.86, 0, 0.07, 1), opacity .6s cubic-bezier(0.86, 0, 0.07, 1);
     opacity: 0;
 }
 
 #Content.scrolled {
-	transform: translate3d(0, 0, 0) scale(1);
 	opacity: 1;
+    transition: transform .6s cubic-bezier(0.86, 0, 0.07, 1), opacity .6s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+/*Aside Menu */
+#BackgroundMenu {
+	position: fixed !important;
+	height: 100vh;
+    width: 100%;
+	top: 0;
+	z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+}
+
+#AsideMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 40px;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    overflow: hidden;
+    pointer-events: auto;
+    transition: all .6 ease;
+}
+
+#AsideMenu:hover {
+    width: 150px;
+    transition: all .6 ease;
+}
+
+#BackgroundMenu:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .6 ease;
+}
+
+.AsideBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    overflow: hidden;
 }
 
 /* Slider */
@@ -201,12 +253,83 @@ img:nth-child(5) {
 	animation-delay: 8s;
 }
 
+/* Skills */
+#SkillsSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px 0px;
+}
+
+.Skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 180px;
+    margin: 10px 25px;
+}
+
+.SkillTitle h1{
+    display: inline-block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.SkillTitle h1::first-letter {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.progressBar {
+	position: relative;
+	border-radius: 60px;
+	overflow: hidden;
+	width: 100%;
+	float: bottom;
+}
+
+.progressBar span {
+	display: block;
+}
+
+.bar {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.progress {
+    background: linear-gradient(45deg, #000, #e73c7e, #23a6d5 , #23d5ab);
+	padding: 5px;
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
 /* Page styles */
 article {
     padding: 10px;
-	border-radius: 5px;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-	background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: #fff;
 }
 
 #AboutArticle {
@@ -239,59 +362,6 @@ article {
     text-align: justify;
     text-align-last: center;
     padding: 0px 15px;
-}
-
-#SkillsSection {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100vh;
-}
-
-.Skill {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-    height: 180px;
-    margin: 10px 25px;
-}
-
-.SkillTitle {
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 5px;
-    text-shadow: #000 0px 0px 5px;
-    padding: 0;
-    margin: 0;
-}
-
-.progressBar {
-	position: relative;
-	border-radius: 60px;
-	overflow: hidden;
-	width: 100%;
-	float: bottom;
-}
-
-.progressBar span {
-	display: block;
-}
-
-.bar {
-	background: rgba(0, 0, 0, 0.2);
-}
-
-.progress {
-	background: #212121;
-	padding: 5px;
 }
 
 /* Header hero style */
