@@ -267,7 +267,7 @@ body {
 .pic-ctn>img {
 	position: absolute;
 	opacity: 0;
-	animation: display 10s infinite;
+	animation: display 10s lo;
 	min-width: 100%;
     max-width: 100%;
 	min-height: 100vh;
