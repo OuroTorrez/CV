@@ -93,25 +93,35 @@ body {
 	text-shadow: rgb(0, 0, 0) 0px 0px 20px;
 }
 
-#SD {
+* {
+    border: 1px solid red;
+}
+
+#ScrollDown {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SD {
     position: absolute;
     bottom: 0;
     margin: 0;
 }
 
-#SD a span{
+.SD a *{
     display: inline-block;
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
     font-weight: 600px;
-    font-size: 15px;
+    font-size: 20px;
     text-shadow: rgb(0, 0, 0) 0px 0px 10px;
 }
 
-#SD a span::first-letter {
-    font-size: 20px;
+.SD a span::first-letter {
+    font-size: 25px;
 }
 
 /* Content styles */
@@ -277,9 +287,12 @@ body {
 	opacity: 0;
 	animation: display 10s infinite;
 	min-width: 100%;
-    max-width: 100%;
-	min-height: 100vh;
+    max-width: 100vh;
+    min-height: 100%;
     max-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 	filter: blur(5px);
 }
 
@@ -473,7 +486,7 @@ img:nth-child(5) {
 /* Portfolio styles */
 #PortfolioSection {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -484,9 +497,31 @@ img:nth-child(5) {
 #Portfolio {
     width: 90%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    column-gap: 0;
+}
+
+#PortfolioTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    column-gap: 0;
+}
+
+#PortfolioTitle h1, #PortfolioTitle h3 {
+    margin: 0;
+}
+
+#Portfolio * {
+    border: 1px solid red;
 }
 
 /* Page styles */

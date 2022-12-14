@@ -10,7 +10,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
         integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
@@ -22,7 +22,13 @@
             <a href="#" class="LinkIcons"><i class="bi bi-linkedin"></i></a>
             <a href="#" class="LinkIcons"><i class="bi bi-github"></i></a>
         </icons>
-        <h1 id="SD"><a href="#"><span>Scroll &nbsp</span><span>Down</span></a></h1>
+        <div id="ScrollDown">
+            <div class="SDIcons">
+                <a><i class="bi bi-chevron-down"></i></a>
+                <a><i class="bi bi-chevron-down"></i></a>
+            </div>
+            <h1 class="SD"><a href="#"><span>Scroll &nbsp</span><span>Down</span></a></h1>
+        </div>
     </header>
 
     <content id="Content">
@@ -63,6 +69,7 @@
                     Used to Git management and teamwork flows. Enthusiastic and fast learner.</p>
             </article>
         </section>
+
         <section id="SkillsSection">
             <div class="SkillSectionsTitle">
                 <h1 data-text="Skills">Skills</h1>
@@ -318,7 +325,7 @@
                     <h1>Best projects</h1>
                     <h3>Project name</h3>
                 </div>
-                <div>
+                <div id="PortfolioContent">
                     <img>
                 </div>
             </article>
@@ -334,7 +341,7 @@
     integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-    $('#SD').click(function () {
+    $('.SD').click(function () {
         $('#Header, #Content').addClass('scrolled');
     });
 
