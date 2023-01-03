@@ -94,20 +94,64 @@ body {
 }
 
 * {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
+}
+
+@keyframes SDIconsAnim {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 #ScrollDown {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    bottom: 10px;
+}
+
+.SDIcons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.SDIcons a {
+    animation: SDIconsAnim 1s ease infinite;
+    text-shadow: rgb(0, 0, 0) 0px 0px 20px;
+}
+
+.SDIcons a:nth-child(1) {
+    display: inline-block;
+    position: relative;
+    bottom: -15px;
+}
+.SDIcons a:nth-child(2) {
+    display: inline-block;
+    animation-delay: -.1s;
 }
 
 .SD {
-    position: absolute;
-    bottom: 0;
     margin: 0;
+    padding: 0;
+    cursor: pointer;
 }
 
 .SD a *{
