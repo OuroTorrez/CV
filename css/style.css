@@ -94,7 +94,7 @@ body {
 }
 
 * {
-    /*border: 1px solid red;*/
+    border: 1px solid red;
 }
 
 @keyframes SDIconsAnim {
@@ -287,41 +287,85 @@ body {
 /* About card */
 
 #AboutArticle {
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+
     min-width: 800px;
     max-width: 800px;
     z-index: 1;
     padding: 20px;
 }
 
-#AboutArticle h1 {
-    color: #000;
-    font-size: 25px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 5px;
-    text-shadow: #000 0px 0px 20px;
+#AboutArticle:hover > #AboutInfo img{
+    left: 555px;
+    transition: all .6s ease;
 }
 
-#AboutArticle p{
-    color: #000;
-    font-size: 15px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: justify;
-    text-align-last: center;
-    padding: 0px 15px;
+#AboutArticle:hover > #AboutInfo #AboutMe {
+    
+    transform: scale(0, 1);
+    background-color: rebeccapurple;
+    transition: all .6s ease;
 }
 
-#AboutArticle img {
+#AboutInfo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    left: 0;
+}
+
+#AboutInfo img {
+    position: relative;
+    left: 0;
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: all .6s ease;
 }
 
+#AboutInfoText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 0px 240px 0px 0px;
+    margin: 0;
+    z-index: -1;
+}
+
+#AboutInfoText span h3, #AboutInfoText span p{
+    display: inline;
+    color: red;
+}
+
+#AboutMe {
+    transform-origin: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 555px;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+    right: 0;
+    z-index: 1;
+    text-align: justify;
+    transition: all .6s ease;
+}
+
+#AboutMe p {
+    
+    overflow: hidden;
+}
 
 /* Slider */
 @keyframes display {
