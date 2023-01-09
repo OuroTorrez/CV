@@ -1,5 +1,16 @@
+/* Variable control */
+
+:root {
+    --Background: #121212;
+    --Surface: #222222;
+    --Primary: #ff7597;
+    --Secondary: #ff0266;
+    --OnColor: #121212;
+    --OnBackground: #fff;
+}
+
 /* Font control */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Poppins', sans-serif;
@@ -13,13 +24,17 @@ span, p, ul, li, i, a{
 
 /* Body style */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body * {
     box-sizing: border-box;
     /*border: 1px solid red;*/
 }
 body {
     margin: 0;
-    background-color: #000;
+    background-color: var(--Background);
 }
 
 /* Header style */
@@ -63,7 +78,7 @@ body {
     font-size: 60px;
     font-weight: 600;
     letter-spacing: 5px;
-    text-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    text-shadow: var(--Primary) 0px 0px 100px;
 }
 
 #HeaderTitle span::first-letter {
@@ -91,10 +106,6 @@ body {
 	letter-spacing: 10px;
 	transition: .5s;
 	text-shadow: rgb(0, 0, 0) 0px 0px 20px;
-}
-
-* {
-    border: 1px solid red;
 }
 
 @keyframes SDIconsAnim {
@@ -207,7 +218,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--Surface);
     width: 40px;
     height: 90vh;
     margin: 0;
@@ -218,7 +229,8 @@ body {
     transition: all .6s ease;
     left: 0;
     border-radius: 0px 5px 5px 0px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /*box-shadow: rgba(255, 255, 255, 0.25) 0px 6px 12px -2px, rgba(255, 255, 255, 0.3) 0px 3px 7px -3px;*/
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
 }
 
 #AsideList {
@@ -250,7 +262,7 @@ body {
     font-weight: 600;
     color: transparent;
     letter-spacing: 2px;
-    -webkit-text-stroke: 1px #bbb;
+    -webkit-text-stroke: 1px var(--Primary);
     padding: 0;
 
 }
@@ -262,15 +274,15 @@ body {
     color: #000;
     overflow: hidden;
     width: 0%;
-    border-right: #000 2px solid;
+    border-right: #fff 2px solid;
     transition: all .6s ease-out;
 }
 
 .AsideItem a:hover::before {
     width: 100%;
-    filter: drop-shadow(0 0 25px rgb(73, 0, 0));
-    color: rgb(73, 0, 0);
-    -webkit-text-stroke: 1px rgb(73, 0, 0);
+    filter: drop-shadow(0 0 55px var(--Secondary));
+    color: var(--OnBackground);
+    -webkit-text-stroke: 1px var(--Primary);
     transition: all .6s ease;
 }
 
@@ -297,19 +309,22 @@ body {
     padding: 20px;
 }
 
-#AboutArticle:hover > #AboutInfo img{
+#AboutArticle:hover > #About img{
     left: 555px;
     transition: all .6s ease;
 }
 
-#AboutArticle:hover > #AboutInfo #AboutMe {
-    
-    transform: scale(0, 1);
-    background-color: rebeccapurple;
+#AboutArticle:hover > #About #AboutMe { 
+    width: 0;
     transition: all .6s ease;
 }
 
-#AboutInfo {
+#AboutArticle:hover > #About #AboutInfo {
+    width: 555px;
+    transition: all .6s ease;
+}
+
+#About {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -321,50 +336,112 @@ body {
     left: 0;
 }
 
-#AboutInfo img {
-    position: relative;
+#About img {
+    position: absolute;
     left: 0;
     border-radius: 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
     transition: all .6s ease;
 }
 
-#AboutInfoText {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    height: 100%;
-    padding: 0px 240px 0px 0px;
-    margin: 0;
-    z-index: -1;
+#AboutMe h1 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-#AboutInfoText span h3, #AboutInfoText span p{
-    display: inline;
-    color: red;
+#AboutMe h1::first-letter {
+    font-size: 25px;
 }
 
 #AboutMe {
-    transform-origin: right;
+    overflow: hidden;
+    position: absolute;
+    width: 555px;
+    min-height: 300px;
+    max-height: 300px;
+    right: 0;
+    transition: all .6s ease;
+}
+
+#AboutMe div {
+    position: absolute;
+    overflow: hidden;
+    right: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 555px;
-    padding: 0px 0px 0px 0px;
+    padding: 20px;
+    text-align: justify;
+    min-width: 555px;
+    max-width: 555px;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+#AboutInfoText span h1 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#AboutInfoText span h1::first-letter {
+    font-size: 25px;
+}
+
+#AboutInfoText span h3 {
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#AboutInfoText span h3::first-letter {
+    font-size: 20px;
+}
+
+#AboutInfo {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    width: 0;
+    min-height: 300px;
+    max-height: 300px;
+    padding: 0;
     margin: 0;
     right: 0;
-    z-index: 1;
-    text-align: justify;
     transition: all .6s ease;
 }
 
-#AboutMe p {
-    
+#AboutInfo #AboutInfoText span > *{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--OnBackground);
+    padding: 0;
+    margin: 0;
+}
+
+#AboutInfo #AboutInfoText {
+    position: absolute;
     overflow: hidden;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0px;
+    row-gap: 0px;
+    min-width: 555px;
+    max-width: 555px;
+    min-height: 300px;
+    max-height: 300px;
+}
+
+#InfoIcons .LinkIcons {
+    color: var(--Secondary) !important;
+    text-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
 }
 
 /* Slider */
@@ -474,11 +551,10 @@ img:nth-child(5) {
     text-align: center;
     position: relative;
     padding: 0;
-    color: #fff;
+    color: var(--OnBackground);
     text-transform: uppercase;
     font-size: 40px;
     font-weight: 900;
-    text-shadow: #e73c7e 0px 0px 20px;
 }
 
 .SkillSectionsTitle h1::first-letter{
@@ -499,7 +575,6 @@ img:nth-child(5) {
 
 .SkillTitle h1{
     display: inline-block;
-    color: #000;
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
@@ -553,7 +628,8 @@ img:nth-child(5) {
     }
 }
 .progress {
-    background: linear-gradient(45deg, #000, #e73c7e, #23a6d5 , #23d5ab);
+    color: var(--OnColor);
+    background: linear-gradient(45deg, var(--OnBackground), var(--Secondary) , var(--Primary));
 	padding: 5px;
     background-size: 400% 400%;
     font-weight: bolder;
@@ -607,7 +683,7 @@ img:nth-child(5) {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0px 0px 80px 0px;
+    padding: 0px 0px 50px 0px;
 }
 
 /* Portfolio styles */
@@ -655,8 +731,9 @@ img:nth-child(5) {
 article {
     padding: 10px;
     border-radius: 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    background-color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+    background-color: var(--Surface);
+    color: var(--OnBackground);
 }
 
 /* Header hero style */
