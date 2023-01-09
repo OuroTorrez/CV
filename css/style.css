@@ -262,7 +262,7 @@ body {
     font-weight: 600;
     color: transparent;
     letter-spacing: 2px;
-    -webkit-text-stroke: 1px var(--Primary);
+    -webkit-text-stroke: 1px var(--Secondary);
     padding: 0;
 
 }
@@ -280,9 +280,9 @@ body {
 
 .AsideItem a:hover::before {
     width: 100%;
-    filter: drop-shadow(0 0 55px var(--Secondary));
+    filter: drop-shadow(0 0 55px var(--Primary));
     color: var(--OnBackground);
-    -webkit-text-stroke: 1px var(--Primary);
+    -webkit-text-stroke: 1px var(--Secondary);
     transition: all .6s ease;
 }
 
