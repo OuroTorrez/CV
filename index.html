@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My CV</title>
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
-        integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/e80de1fade.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    
     <!-- Header -->
     <header id="Header">
         <h1 id="HeaderTitle"><span>Adrian &nbsp</span><span>Torrez</span></h1>
@@ -21,7 +22,11 @@
         <icons>
             <a href="#" class="LinkIcons"><i class="bi bi-linkedin"></i></a>
             <a href="#" class="LinkIcons"><i class="bi bi-github"></i></a>
-            <a href="#" class="LinkIcons"><i class="bi bi-codepen"></i></a>
+            <a href="#" class="LinkIcons"><i class="fa-brands fa-codepen"></i></a>
+            <a href="#" class="LinkIcons"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="LinkIcons"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="LinkIcons"><i class="bi bi-envelope-at"></i></a>
+            <a href="#" class="LinkIcons"><i class="bi bi-envelope-heart"></i></a>
         </icons>
         <div id="ScrollDown">
             <div class="SDIcons">
@@ -40,6 +45,7 @@
                     <i class="bi bi-list"></i>
                 </div>
                 <ul id="AsideList">
+                    <li class="AsideItem Home"><a data-text="&nbsp;Home&nbsp;"><span>&nbsp;Home&nbsp;</span></a></li>
                     <li class="AsideItem"><a href="#Slider" data-text="&nbsp;About&nbsp;me&nbsp;">&nbsp;About&nbsp;me&nbsp;</a></li>
                     <li class="AsideItem"><a href="#SkillsSection" data-text="&nbsp;Skills&nbsp;">&nbsp;Skills&nbsp;</a></li>
                     <li class="AsideItem"><a href="#Experience" data-text="&nbsp;Experience&nbsp;">&nbsp;Experience&nbsp;</a></li>
@@ -80,7 +86,11 @@
                             <span id="InfoIcons"><h3>Social media: </h3><br>
                                 <a href="#" class="LinkIcons"><i class="bi bi-linkedin"></i></a>
                                 <a href="#" class="LinkIcons"><i class="bi bi-github"></i></a>
-                                <a href="#" class="LinkIcons"><i class="bi bi-codepen"></i></a></span>
+                                <a href="#" class="LinkIcons"><i class="fa-brands fa-codepen"></i></a>
+                                <a href="#" class="LinkIcons"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="LinkIcons"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="LinkIcons"><i class="bi bi-envelope-heart"></i></a>
+                            </span>
                         </div>
 
                     </div>
@@ -396,14 +406,49 @@
 
         <!-- Experience section -->
         <section id="Experience">
-            
+            <div class="Exp">
+                <article class="ExpTitle">
+                    <h1>Work&nbsp;</h1><h1>Experience</h1>
+                </article>
+                <div class="ExpContent">
+                    <div class="ExpCheckpoint"></div>
+                    <div class="ExpCheckpoint2"></div>
+                    <div class="ExpHeader">
+                        <span>Videogame Programmer</span>
+                        <span>March 07, 2025 - April 07, 2025</span>
+                    </div>
+                    <div class="ExpInfo">
+                        <span>Company</span>
+                        <span>Job description</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Exp">
+                <article class="ExpTitle">
+                    <h1>Work&nbsp;</h1><h1>Experience</h1>
+                </article>
+                <div class="ExpContent">
+                    <div class="ExpCheckpoint"></div>
+                    <div class="ExpHeader">
+                        <span>Videogame Programmer</span>
+                        <span>March 07, 2025 - April 07, 2025</span>
+                    </div>
+                    <div class="ExpInfo">
+                        <span>Company</span>
+                        <span>Job description</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Portfolio section -->
-        <section id="PortfolioSection">
+        <section id="Portfolio">
             
         </section>
+
     </content>
+    
 </body>
 
 </html>
@@ -416,6 +461,10 @@
 <script>
     $('.SD').click(function () {
         $('#Header, #Content').addClass('scrolled');
+    });
+
+    $('.Home').click(function(){
+        $('#Header, #Content').removeClass('scrolled');
     });
 
     $('#Header').mousewheel(function (e) {
@@ -442,6 +491,3 @@
         $('#backgroundMenu').addClass('backgroundMenu');
     });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>

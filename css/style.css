@@ -30,10 +30,11 @@ html {
 
 body * {
     box-sizing: border-box;
-    /*border: 1px solid red;*/
+    border: 1px solid red;
 }
 body {
     margin: 0;
+    padding: 0;
     background-color: var(--Background);
 }
 
@@ -157,6 +158,11 @@ body {
 .SDIcons a:nth-child(2) {
     display: inline-block;
     animation-delay: -.1s;
+}
+
+.Home {
+    cursor: pointer;
+    margin-bottom: 50px;
 }
 
 .SD {
@@ -723,8 +729,102 @@ img:nth-child(5) {
     padding: 0px 0px 50px 0px;
 }
 
+/* Experience styles */
+#Experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 60px 0px 60px 0px;
+    background-color: var(--Primary);
+}
+
+.Exp {
+    width: 20%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    pointer-events: all;
+}
+
+.ExpTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+}
+
+.ExpTitle h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+.ExpTitle h1::first-letter {
+    font-size: 25px;
+}
+
+.ExpContent {
+    transform: translateX(10px);
+    border-left: var(--OnColor) solid 5px;
+    padding: 10px;
+}
+
+.ExpContent:hover > .ExpCheckpoint{
+    animation-delay: 1.5s;
+    animation: Checkpoint infinite 1.5s;
+}
+
+@keyframes Checkpoint {
+    0% {
+        border: var(--OnColor) solid 3px;
+    }
+    100% {
+        border: #00000000 solid 6px;
+    }
+}
+
+.ExpCheckpoint {
+    position: absolute;
+    top: 7px;
+    left: -11px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--Secondary);
+}
+
+.ExpHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.ExpHeader span:first-child {
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.ExpHeader span:last-child {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
 /* Portfolio styles */
-#PortfolioSection {
+#Portfolio {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -734,35 +834,6 @@ img:nth-child(5) {
     padding: 0px 0px 80px 0px;
 }
 
-#Portfolio {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    column-gap: 0;
-}
-
-#PortfolioTitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    column-gap: 0;
-}
-
-#PortfolioTitle h1, #PortfolioTitle h3 {
-    margin: 0;
-}
-
-#Portfolio * {
-    border: 1px solid red;
-}
 
 /* Page styles */
 article {
