@@ -4,6 +4,7 @@
     --Background: #121212;
     --Surface: #222222;
     --Primary: #ff7597;
+    --Option: #222222;
     --Secondary: #ff0266;
     --OnColor: #121212;
     --OnBackground: #fff;
@@ -556,7 +557,7 @@ img:nth-child(5) {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 33%;
     padding: 30px 0px 80px 0px;
 }
 
@@ -738,7 +739,7 @@ img:nth-child(5) {
     flex-wrap: wrap;
     width: 100%;
     padding: 60px 0px 60px 0px;
-    background-color: var(--Primary);
+    background-color: var(--Option);
 }
 
 .Exp {
@@ -779,10 +780,10 @@ img:nth-child(5) {
 }
 
 .ExpCheckpointContainer {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    transform: translateX(-22px);
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-20px);
 }
 
 .ExpCheckpoint {
@@ -791,14 +792,13 @@ img:nth-child(5) {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--Secondary);
+    background-color: var(--Option);
+    border: #000 solid 2px;
     border-radius: 50%;
-    animation: breathe 2s ease-out infinite;
 }
 
 .ExpCheckpoint::before {
     content: "";
-    display: block;
     width: 100%;
     height: 100%;
     background-color: var(--OnColor);
@@ -806,32 +806,29 @@ img:nth-child(5) {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.4;
-    animation: disappear 2s ease-out infinite;
+    z-index: -1;
+}
+
+.ExpContent:hover .ExpCheckpoint::before {
+    animation: breathe 2s infinite;
 }
 
 @keyframes breathe {
     0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    25%{
         transform: scale(1);
+        opacity: 1;
     }
     50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes disappear {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.1);
+        transform: scale(2.5);
         opacity: 0;
     }
     100% {
-        transform: scale(1);
+        transform: scale(0);
+        opacity: 0;
     }
 }
 
@@ -844,13 +841,13 @@ img:nth-child(5) {
     padding: 0;
 }
 
-.ExpHeader span:first-child {
+.ExpHeader span:nth-child(odd) {
     font-weight: 900;
     letter-spacing: 1px;
 }
 
-.ExpHeader span:last-child {
-    font-size: 11px;
+.ExpHeader span:nth-child(even) {
+    font-size: 15px;
     font-weight: 300;
     letter-spacing: 1px;
 }
