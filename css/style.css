@@ -204,6 +204,32 @@ body {
     transition: transform .6s cubic-bezier(0.86, 0, 0.07, 1), opacity .6s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
+.SectionsTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    margin: 0px 0px 20px 0px;
+    padding: 0;
+}
+
+.SectionsTitle h1{
+    text-align: center;
+    position: relative;
+    padding: 0;
+    color: var(--OnBackground);
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.SectionsTitle h1::first-letter{
+    font-size: 60px;
+    font-weight: 700;
+}
+
 /*Aside Menu */
 #BackgroundMenu {
 	position: fixed;
@@ -560,55 +586,20 @@ img:nth-child(5) {
 #SkillsSection {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
-    
     width: 100%;
-    padding: 0px 0px 0px 10px;
+    padding: 20px 0px 60px 0px;
 }
 
-.SkillsContainers {
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.Skill{
-    width: 250px;
-    height: 80px;
-    margin: 10px 15px;
-    padding: 0;
-    overflow: hidden;
-    pointer-events: all;
-}
-
-.SkillSectionsTitle {
+.SkillsTools {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 90px;
-    margin: 0;
-    padding: 0;
-}
-
-.SkillSectionsTitle h1{
-    text-align: center;
-    position: relative;
-    padding: 0;
-    color: var(--OnBackground);
-    text-transform: uppercase;
-    font-size: 40px;
-    font-weight: 900;
-}
-
-.SkillSectionsTitle h1::first-letter{
-    font-size: 50px;
-    font-weight: 900;
+    flex-wrap: wrap;
+    width: 400px;
 }
 
 .SkillTitle {
@@ -630,6 +621,7 @@ img:nth-child(5) {
     letter-spacing: 5px;
     padding: 0;
     margin: 0;
+    color: var(--OnBackground);
 }
 
 .SkillTitle h1::first-letter {
@@ -637,24 +629,13 @@ img:nth-child(5) {
     font-weight: 600;
 }
 
-.SkillContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    transform: translateY(0px);
-    transition: all .6s ease;
-    padding: 0px 10px;
-} 
-
 .progressBar {
 	position: relative;
 	border-radius: 60px;
 	overflow: hidden;
 	width: 100%;
 	float: bottom;
+    margin-bottom: 15px;
 }
 
 .progressBar span {
@@ -662,7 +643,7 @@ img:nth-child(5) {
 }
 
 .bar {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--Surface);
 }
 
 @keyframes gradient {
@@ -686,26 +667,17 @@ img:nth-child(5) {
     animation: gradient 10s ease infinite;
 }
 
-.Skill:hover .SkillTitle{
-    transform: translateY(-150px);
-    transition: all .6s ease;
-}
-
-.Skill:hover .SkillContent {
-    transform: translateY(-80px);
-    transition: all .6s ease;
-}
-
 /* Experience styles */
 #Experience {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    padding: 60px 0px 60px 0px;
-    background-color: var(--Option);
+    padding: 20px 0px 60px 0px;
+    background-color: var(--Surface);
+    color: var(--OnBackground);
 }
 
 .Exp {
@@ -713,7 +685,6 @@ img:nth-child(5) {
     height: 100%;
     margin: 0;
     padding: 0;
-    pointer-events: all;
 }
 
 .ExpTitle {
@@ -725,6 +696,7 @@ img:nth-child(5) {
     height: 90px;
     margin: 0;
     padding: 0;
+    background-color: var(--Background)
 }
 
 .ExpTitle h1 {
@@ -741,8 +713,9 @@ img:nth-child(5) {
 
 .ExpContent {
     transform: translateX(10px);
-    border-left: var(--OnColor) solid 5px;
+    border-left: var(--Background) solid 5px;
     padding: 10px;
+    pointer-events: all;
 }
 
 .ExpCheckpointContainer {
@@ -758,20 +731,21 @@ img:nth-child(5) {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--Option);
+    background-color: var(--Surface);
     border: #000 solid 2px;
     border-radius: 50%;
 }
 
 .ExpCheckpoint::before {
     content: "";
-    width: 100%;
-    height: 100%;
-    background-color: var(--OnColor);
-    border-radius: 50%;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Secondary);
+    border-radius: 50%;
     z-index: -1;
 }
 
@@ -789,7 +763,7 @@ img:nth-child(5) {
         opacity: 1;
     }
     50% {
-        transform: scale(2.5);
+        transform: scale(3);
         opacity: 0;
     }
     100% {
@@ -807,15 +781,16 @@ img:nth-child(5) {
     padding: 0;
 }
 
-.ExpHeader span:nth-child(odd) {
-    font-weight: 900;
+.ExpHeader .ExpJob {
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
-.ExpHeader span:nth-child(even) {
+.ExpHeader .ExpTime {
     font-size: 15px;
     font-weight: 300;
     letter-spacing: 1px;
+    color: var(--Secondary);
 }
 
 /* Portfolio styles */
