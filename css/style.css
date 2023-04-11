@@ -31,7 +31,7 @@ html {
 
 body * {
     box-sizing: border-box;
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
 }
 body {
     margin: 0;
@@ -671,7 +671,7 @@ img:nth-child(5) {
 #Experience {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
@@ -681,7 +681,7 @@ img:nth-child(5) {
 }
 
 .Exp {
-    width: 20%;
+    width: 25%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -735,7 +735,7 @@ img:nth-child(5) {
     border: #000 solid 2px;
     border-radius: 50%;
 }
-
+/*
 .ExpCheckpoint::before {
     content: "";
     display: block;
@@ -749,9 +749,11 @@ img:nth-child(5) {
     z-index: -1;
 }
 
+
 .ExpContent:hover .ExpCheckpoint::before {
     animation: breathe 2s infinite;
 }
+*/
 
 @keyframes breathe {
     0% {
@@ -792,6 +794,69 @@ img:nth-child(5) {
     letter-spacing: 1px;
     color: var(--Secondary);
 }
+
+.ExpInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.ExpInfoDetails {
+    height: 0px;
+    overflow: hidden;
+    animation: auto;
+    -moz-transition:all 350ms ease;
+    -ms-transition:all 350ms ease;
+    -o-transition:all 350ms ease;
+    -webkit-transition:all 350ms ease;
+    transition:all 350ms ease;
+}
+
+.ExpExpand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 85%;
+    height: 45px;
+    cursor: pointer;
+}
+
+.ExpExpand i {
+    color: var(--Secondary);
+    font-size: 15px;
+    text-shadow: rgb(0, 0, 0) 0px 0px 20px;
+}
+
+.ExpExpand span {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.ExpExpand i:nth-child(1) {
+    display: inline-block;
+    position: relative;
+    bottom: -15px;
+}
+.ExpExpand i:nth-child(2) {
+    display: inline-block;
+    animation-delay: -.1s;
+}
+
+.ExpExpand:hover i{
+    animation: SDIconsAnim 1s ease infinite;
+}
+
+.ExpExpand:hover i:nth-child(2){
+    animation-delay: -.1s;
+}
+
 
 /* Portfolio styles */
 #Portfolio {
