@@ -735,7 +735,7 @@ img:nth-child(5) {
     border: #000 solid 2px;
     border-radius: 50%;
 }
-/*
+
 .ExpCheckpoint::before {
     content: "";
     display: block;
@@ -753,7 +753,7 @@ img:nth-child(5) {
 .ExpContent:hover .ExpCheckpoint::before {
     animation: breathe 2s infinite;
 }
-*/
+
 
 @keyframes breathe {
     0% {

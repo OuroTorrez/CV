@@ -375,8 +375,7 @@
             <div class="Exp">
                 <!-- Title for the section-->
                 <article class="ExpTitle">
-                    <h1>Work&nbsp;</h1>
-                    <h1>Experience</h1>
+                    <h1>Education</h1>
                 </article>
                 <!-- Experience slot -->
                 <div class="ExpContent">
@@ -455,7 +454,9 @@
 
         <!-- Portfolio section -->
         <section id="Portfolio">
-
+            <div class="SectionsTitle">
+                <h1>Portfolio</h1>
+            </div>
         </section>
 
     </content>
@@ -512,4 +513,8 @@
             elemento.css("height", "0");
         }
     });
+
+    $('.ExpContent').hover(function(){
+        $('.ExpCheckpoint::before').css("animation", "breathe 2s infinite");
+    })
 </script>
