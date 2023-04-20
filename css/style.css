@@ -30,9 +30,15 @@ html {
 }
 
 body * {
+    cursor: default;
     box-sizing: border-box;
     /* border: 1px solid red; */
 }
+
+body a {
+    cursor: pointer;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -49,7 +55,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -235,7 +241,7 @@ body {
 	position: fixed;
 	height: 100vh;
     width: 100%;
-	z-index: 1;
+	z-index: 99;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -629,45 +635,8 @@ img:nth-child(5) {
     font-weight: 600;
 }
 
-.progressBar {
-	position: relative;
-	border-radius: 60px;
-	overflow: hidden;
-	width: 100%;
-	float: bottom;
-    margin-bottom: 15px;
-}
-
-.progressBar span {
-    display: block;
-}
-
-.bar {
-    background: var(--Surface);
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-.progress {
-    color: var(--OnColor);
-    background: linear-gradient(45deg, var(--OnBackground), var(--Secondary) , var(--Primary));
-	padding: 5px;
-    background-size: 400% 400%;
-    font-weight: bolder;
-    font-size: 15px;
-    animation: gradient 10s ease infinite;
-}
-
 /* Experience styles */
+
 #Experience {
     display: flex;
     flex-direction: row;
@@ -675,16 +644,16 @@ img:nth-child(5) {
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    padding: 20px 0px 60px 0px;
+    padding: 0px 0px 80px 0px;
     background-color: var(--Surface);
     color: var(--OnBackground);
 }
 
 .Exp {
-    width: 25%;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 .ExpTitle {
@@ -693,18 +662,10 @@ img:nth-child(5) {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 90px;
-    margin: 0;
-    padding: 0;
-    background-color: var(--Background)
-}
-
-.ExpTitle h1 {
+    height: 100%;
     text-transform: uppercase;
     letter-spacing: 3px;
-    padding: 0;
-    margin: 0;
-    display: inline;
+    background-color: var(--Background);
 }
 
 .ExpTitle h1::first-letter {
@@ -712,51 +673,51 @@ img:nth-child(5) {
 }
 
 .ExpContent {
-    transform: translateX(10px);
-    border-left: var(--Background) solid 5px;
-    padding: 10px;
-    pointer-events: all;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    left: 20px;
+    border-left: 5px solid var(--Background);
+    padding-left: 10px;
 }
 
-.ExpCheckpointContainer {
-    position: absolute;
+.ExpPointContainer {
+    position: relative;
+    top: 20px;
+    left: -20px;
+    z-index: 1;
+}
+
+.ExpPoint {
     width: 15px;
     height: 15px;
-    transform: translateX(-20px);
-}
-
-.ExpCheckpoint {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    border-radius: 50%;
     background-color: var(--Surface);
-    border: #000 solid 2px;
-    border-radius: 50%;
+    border: 3px solid var(--Background);
+    z-index: 1;
 }
 
-.ExpCheckpoint::before {
+.ExpPoint::after {
     content: "";
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--Secondary);
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
+    background-color: var(--Secondary);
+    opacity: 0;
     z-index: -1;
 }
 
-
-.ExpContent:hover .ExpCheckpoint::before {
-    animation: breathe 2s infinite;
+.ExpPoint.Anim::after {
+    animation: Breathe 2s infinite;
 }
 
-
-@keyframes breathe {
-    0% {
+@keyframes Breathe {
+	0% {
         transform: scale(0);
         opacity: 1;
     }
@@ -775,88 +736,84 @@ img:nth-child(5) {
 }
 
 .ExpHeader {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
 }
 
 .ExpHeader .ExpJob {
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
 }
 
-.ExpHeader .ExpTime {
+.ExpHeader .ExpTime { 
+    font-weight: 500;
     font-size: 15px;
-    font-weight: 300;
-    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
     color: var(--Secondary);
 }
 
 .ExpInfo {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     align-items: flex-start;
-    margin: 0;
-    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
 }
 
-.ExpInfoDetails {
+.ExpInfo .ExpInfoDetails {
+    position: relative;
     height: 0px;
     overflow: hidden;
-    animation: auto;
-    -moz-transition:all 350ms ease;
-    -ms-transition:all 350ms ease;
-    -o-transition:all 350ms ease;
-    -webkit-transition:all 350ms ease;
-    transition:all 350ms ease;
+    transition: all .2s ease;
 }
 
-.ExpExpand {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 85%;
-    height: 45px;
+.ExpInfo .ExpInfoDetails.Open {
+    height: 120px;
+    overflow: hidden;
+    transition: all .2s ease;
+}
+
+.Expand {
     cursor: pointer;
-}
-
-.ExpExpand i {
     color: var(--Secondary);
-    font-size: 15px;
-    text-shadow: rgb(0, 0, 0) 0px 0px 20px;
-}
-
-.ExpExpand span {
-    display: inline;
-    margin: 0;
-    padding: 0;
-}
-
-.ExpExpand i:nth-child(1) {
-    display: inline-block;
+    pointer-events: all;
     position: relative;
-    bottom: -15px;
+    left: 40%;
+    font-size: 15px;
+    -webkit-text-stroke: 1px;
 }
-.ExpExpand i:nth-child(2) {
-    display: inline-block;
+
+.ExpInfo i:nth-child(2n) {
+    position: relative;
+    top: -15px;
+    font-size: 15px;
     animation-delay: -.1s;
 }
 
-.ExpExpand:hover i{
-    animation: SDIconsAnim 1s ease infinite;
+.Expand.ExpAnim {
+    animation: SDIconsAnim 1s infinite;
 }
 
-.ExpExpand:hover i:nth-child(2){
-    animation-delay: -.1s;
-}
+@keyframes Expand {
+    0% {
+        top: calc(100% + 15px)
+    }
 
+    50% {
+        top: calc(100% + 0px)
+    }
+
+    100% {
+        top: calc(100% + 15px)
+    }
+}
 
 /* Portfolio styles */
 #Portfolio {
@@ -866,9 +823,105 @@ img:nth-child(5) {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0px 0px 80px 0px;
+    padding: 0px 80px 80px 80px;
 }
 
+#PortfolioContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#PortfolioTimer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Surface);
+    color: var(--OnBackground);
+}
+
+#PortfolioTimer .bar {
+    background-color: var(--Background);
+}
+
+#PortfolioTimer .progress {
+    padding: 5px 0 0 0;
+}
+
+#PortfolioContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px 20px 20px;
+}
+
+#PortfolioContent .Buttons {
+    background-color: var(--Secondary);
+    border-radius: 5px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+    font-size: 20px;
+    -webkit-text-stroke: 5px;
+    color: var(--Surface);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.PortfolioProject {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease;
+    margin: 15px;
+}
+
+.PortfolioProjectTitle h1{
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.PortfolioProjectTitle h1::first-letter {
+    font-size: 25px;
+}
+
+.PortfolioImage {
+    width: 850px;
+    height: 700px;
+}
+
+.PortfolioImage img {
+    border-radius: 5px;
+    filter: grayscale();
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+}
+
+.PortfolioInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 550px;
+    height: 100%;
+    padding: 20px;
+}
+
+
+.PortfolioIcons {
+    color: var(--Secondary);
+    font-size: 25px;
+}
 
 /* Page styles */
 article {
@@ -879,23 +932,44 @@ article {
     color: var(--OnBackground);
 }
 
-.DownloadButton {
-    display: inline-block;
-    height: 50px;
-    margin: 0;
-    padding: 10px 10px;
-    background-color: var(--Secondary);
-    border-radius: 5px;
-    text-decoration: none;
-    color: red;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: 500;
+.progressBar {
+	position: relative;
+	border-radius: 60px;
+	overflow: hidden;
+	width: 100%;
+	float: bottom;
+    margin-bottom: 15px;
 }
 
-.DownloadButton::first-letter {
-    font-size: 200px;
-    font-weight: 500;
+.progressBar span {
+    display: block;
+}
+
+.bar {
+    background: var(--Surface);
+}
+
+.progress {
+    color: var(--OnColor);
+    background: linear-gradient(45deg, var(--OnBackground), var(--Secondary) , var(--Primary));
+    padding: 5px;
+    background-size: 400% 400%;
+    font-weight: bolder;
+    font-size: 15px;
+    animation: gradient 10s ease infinite;
+    transition: all 150ms ease-out;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Header hero style */
