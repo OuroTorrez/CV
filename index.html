@@ -454,7 +454,30 @@
                     </div>
                     <div id="PortfolioContent">
                         <i class="bi bi-chevron-compact-left Buttons PortfolioLeft"></i>
-                        <div class="PortfolioProject">
+                        <div class="PortfolioProject PortfolioShown">
+                            <div class="PortfolioImage">
+                                <img src="https://picsum.photos/850/700" alt="Portfolio Image">
+                            </div>
+                            <div class="PortfolioInfo">
+                                <div class="PortfolioProjectTitle">
+                                    <h1>Project&nbsp;</h1>
+                                    <h1>Name 1</h1>
+                                </div>
+                                <div class="PortfolioIcons">
+                                    <i class="fa-brands fa-unity"></i>
+                                    <span>C#</span>
+                                    <i class="fa-brands fa-square-js"></i>
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                    <i class="fa-brands fa-php"></i>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at dapibus felis. 
+                                    Curabitur at nisi eget lorem posuere gravida. Ut gravida fermentum cursus.
+                                    Integer vel orci porttitor, ultricies leo at, porttitor turpis. Donec efficitur in orci sed facilisis.
+                                    Etiam eu semper quam. Cras id rhoncus ante. Proin pharetra vitae nisl ac egestas. Suspendisse potenti.</p>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="PortfolioProject PortfolioHidden">
                             <div class="PortfolioImage">
                                 <img src="https://picsum.photos/850/700" alt="Portfolio Image">
                             </div>
@@ -476,6 +499,7 @@
                                     Etiam eu semper quam. Cras id rhoncus ante. Proin pharetra vitae nisl ac egestas. Suspendisse potenti.</p>
                             </div>
                         </div>
+                    -->
                         <i class="bi bi-chevron-compact-right Buttons PortfolioRight"></i>
                     </div>
                 </div>
@@ -541,24 +565,45 @@
         $(this).children('.ExpInfo').children('.Expand').toggleClass('ExpAnim');
     });
 
+    var timerWidth = 0;
     $(document).ready(function () {
         var element = $('#PortfolioTimer').children('.progressBar').children('.bar').children('.progress');
-        console.log(this);
-        var width = 0;
+        //console.log(this);
         setInterval(function () {
-            if(width <= 100){
-                width++;
-                element.css("width", width + '%');
-                console.log(width+'%');
+            if(timerWidth <= 100){
+                timerWidth++;
+                element.css("width", timerWidth + '%');
+                //console.log(timerWidth+'%');
             } else {
-                width = -5;
-                //Cambiar de imagen
+                timerWidth = -5;
+                ChangeSelectedPortfolio("post");
             }
         }, 100);
     });
 
+    const portfolioElements = Array.from(document.querySelectorAll('.PortfolioProject'));
+
+    var count = 0;
+    function ChangeSelectedPortfolio(pos){
+        portfolioElements[count].classList.add('PortfolioHidden');
+        portfolioElements[count].classList.remove('PortfolioShown');
+        if(pos=="prev"){
+            count--;
+        } else if (pos=="post"){
+            count++;
+        }
+        if(count >= portfolioElements.length){
+            count = 0;
+        } else if (count <= 0){
+            count = portfolioElements.length;
+        }
+        portfolioElements[count].classList.remove('PortfolioHidden');
+        portfolioElements[count].classList.add('PortfolioShown');
+        console.log(portfolioElements);
+    }
+
     $('.PortfolioLeft').click(function(){
+        timerWidth = -5;
         alert($('.PortfolioProject').css('animation', keyframes));
-        
     });
 </script>
