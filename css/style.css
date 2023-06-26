@@ -108,14 +108,6 @@ body {
     font-size: 25px;
 }
 
-.LinkIcons {
-    color: #fff;
-	font-size: 30px;
-	letter-spacing: 10px;
-	transition: .5s;
-	text-shadow: rgb(0, 0, 0) 0px 0px 20px;
-}
-
 @keyframes SDIconsAnim {
     0% {
         transform: translateY(0px);
@@ -256,7 +248,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*background-color: var(--Secondary);*/
     width: 40px;
     height: 40px;
     top: 0px;
@@ -320,9 +311,9 @@ body {
     text-decoration: none;
     font-size: 35px;
     font-weight: 600;
-    color: transparent;
+    color: var(--OnBackground);
     letter-spacing: 2px;
-    -webkit-text-stroke: 1px var(--Secondary);
+    /*-webkit-text-stroke: 1px var(--Primary);*/
     padding: 0;
 
 }
@@ -331,10 +322,10 @@ body {
     content: attr(data-text);
     position: absolute;
     display: inline-block;
-    color: #000;
+    color: var(--OnBackground);
     overflow: hidden;
     width: 0%;
-    border-right: #fff 2px solid;
+    border-right: var(--Secondary) 3px solid;
     transition: all .6s ease-out;
 }
 
@@ -342,7 +333,7 @@ body {
     width: 100%;
     filter: drop-shadow(0 0 55px var(--Primary));
     color: var(--OnBackground);
-    -webkit-text-stroke: 1px var(--Secondary);
+    /*-webkit-text-stroke: 1px var(--Secondary);*/
     transition: all .6s ease;
 }
 
@@ -516,6 +507,11 @@ body {
     text-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
 }
 
+#InfoIcons .LinkIcons > *:hover {
+    transition: all .2s ease;
+    color: var(--OnBackground);
+}
+
 /* Slider */
 @keyframes display {
 	0% {
@@ -647,6 +643,7 @@ img:nth-child(5) {
     padding: 0px 0px 80px 0px;
     background-color: var(--Surface);
     color: var(--OnBackground);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
 }
 
 .Exp {
@@ -950,6 +947,98 @@ img:nth-child(5) {
     overflow: hidden;
 }
 
+/* Footer styles */
+#Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 60px;
+    background-color: var(--Surface);
+    color: var(--OnBackground);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+}
+
+#FooterInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 0 30px 0;
+}
+
+#FooterInfo .SectionsTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    width: 180px;
+    padding: 0 0 0 15px;
+    margin: 0;
+    border-bottom: 2px solid var(--Secondary);
+}
+
+#FooterInfo h1 {
+    padding: 0;
+    margin: 0;
+    color: var(--OnBackground);
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+#FooterInfo h1::first-letter{
+    font-size: 30px;
+}
+
+#FooterMenu ul{
+    padding: 10px 0 0 15px;
+    margin: 0;
+    list-style: none;
+    
+}
+
+#FooterMenu ul li a {
+    text-decoration: none;
+    color: var(--OnBackground);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all .2s ease;
+}
+
+#FooterMenu ul li a:hover {
+    color: var(--Secondary);
+    transition: all .2s ease;
+}
+
+#FooterEnd {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--Secondary);
+    padding: 10px 0px 0px 0px;
+    width: 100%;
+}
+
+#MadeWith span span{
+    color: var(--Secondary);
+}
+
+#FooterIcons .LinkIcons{
+    font-size: 20px;
+    transition: all .2s ease;
+    color: var(--Secondary);
+}
+
+#FooterIcons .LinkIcons > *:hover {
+    transition: all .2s ease;
+    color: var(--OnBackground);
+}
+
 /* Page styles */
 article {
     padding: 10px;
@@ -957,6 +1046,25 @@ article {
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
     background-color: var(--Surface);
     color: var(--OnBackground);
+}
+
+.LinkIcons {
+    
+    color: #fff;
+	font-size: 30px;
+	letter-spacing: 10px;
+	transition: .5s;
+	text-shadow: rgb(0, 0, 0) 0px 0px 20px;
+}
+
+.LinkIcons > * {
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.LinkIcons > *:hover {
+    transition: all .2s ease;
+    color: var(--Secondary);
 }
 
 .progressBar {
