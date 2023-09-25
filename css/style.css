@@ -875,13 +875,12 @@ img:nth-child(5) {
 .PortfolioProject {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: absolute;
     overflow: hidden;
     transition: all .2s ease;
     margin: 15px;
-    height: 700px;
 }
 
 .PortfolioShown {
@@ -892,6 +891,7 @@ img:nth-child(5) {
 
 .PortfolioHidden {
     width: 0%;
+    height: 0%;
     overflow: hidden;
     transition: all 1s ease;
 }
