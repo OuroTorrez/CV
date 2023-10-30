@@ -861,6 +861,11 @@ img:nth-child(5) {
     width: 100%;
 }
 
+#PortfolioTimer .progress{
+    transition: 7s all linear;
+    width: 0%;
+}
+
 #PortfolioContainer {
     display: flex;
     flex-direction: row;

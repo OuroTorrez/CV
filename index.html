@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My CV</title>
+    <title>My CV</title> 
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Bootstrap Icons -->
@@ -476,6 +476,7 @@
                     <div id="PortfolioContainer">
                         <i id="PortfolioButtons" class="bi bi-chevron-compact-left PortfolioLeft"></i>
                         <div id="PortfolioContent">
+
                             <div class="PortfolioProject PortfolioShown">
                                 <img src="https://picsum.photos/550/500">
                                 <div class="PortfolioInfo">
@@ -672,15 +673,18 @@
         //console.log(this);
         setInterval(function () {
             console.log(count);
-            if(timerWidth <= 100){
+            if(timerWidth <= 6){
                 timerWidth++;
-                element.css("width", timerWidth + '%');
+                element.css("transition", "7s all linear");
+                element.css("width", 100 + '%');
                 //console.log(timerWidth+'%');
             } else {
-                timerWidth = -5;
+                timerWidth = 0;
+                element.css("transition", "0.5s all");
+                element.css("width", 0 + '%');
                 ChangeSelectedPortfolio("post");
             }
-        }, 90);
+        }, 1000);
     });
 
     const portfolioElements = Array.from(document.querySelectorAll('.PortfolioProject'));
