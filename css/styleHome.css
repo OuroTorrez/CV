@@ -1,0 +1,66 @@
+/* Body or*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#Header {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(../Images/ChillingCat.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Header * {
+    margin: 0;
+    padding: 0;
+}
+
+#Title {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#Title * {
+    color: var(--OnBackground);
+    font-size: 7vw;
+    display: inline;
+    text-transform: uppercase;
+}
+
+#Title *::first-letter {
+    color: aqua;
+}
+
+#Subtitle * {
+    color: var(--OnBackground);
+    font-size: 3vw;
+    display: inline;
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    #Title * {
+        font-size: 15vw;
+    }
+
+    #Subtitle * {
+        font-size: 5vw;
+    }
+
+    #Title {
+        flex-direction: column;
+    }
+}
