@@ -33,4 +33,7 @@ span, p, ul, li, i, a{
 	font-weight: 400;
 }
 
-/*  */
+/* General Page Styles */
+.FirstLetter {
+    font-size: 120%;
+}

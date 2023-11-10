@@ -4,6 +4,8 @@ body {
     padding: 0;
 }
 
+/* Header styles*/
+
 #Header {
     width: 100vw;
     height: 100vh;
@@ -26,41 +28,45 @@ body {
 }
 
 #Title {
+    color: var(--OnBackground);
+    text-transform: uppercase;
+    font-size: 7vw;
+}
+
+#Subtitle {
+    color: var(--Primary);
+    text-transform: uppercase;
+    font-size: 2vw;
+}
+
+#Title * , #Subtitle *{
+    font-weight: bold;
+}
+
+#Icons {
+    width: 100%;
+    margin-top: 2%;
+    font-size: 3vw;
+    color: var(--OnBackground);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-#Title * {
-    color: var(--OnBackground);
-    font-size: 7vw;
-    display: inline;
-    text-transform: uppercase;
-}
-
-#Title *::first-letter {
-    color: aqua;
-}
-
-#Subtitle * {
-    color: var(--OnBackground);
-    font-size: 3vw;
-    display: inline;
+    gap: 15px;
 }
 
 @media only screen and (max-width: 767px) {
     /* phones */
-    #Title * {
-        font-size: 15vw;
-    }
-
-    #Subtitle * {
-        font-size: 5vw;
-    }
-
     #Title {
-        flex-direction: column;
+        font-size: 10vw;
+    }
+
+    #Subtitle {
+        font-size: 4vw;
+    }
+
+    #Icons {
+        font-size: 8vw;
     }
 }
