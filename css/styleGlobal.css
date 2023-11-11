@@ -37,3 +37,31 @@ span, p, ul, li, i, a{
 .FirstLetter {
     font-size: 120%;
 }
+
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--Surface);
+    color: var(--Primary);
+    border: var(--Primary) 2px solid;
+    border-radius: 10px;
+    padding: 2px 20px;
+    font-size: 1.1vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+    white-space: nowrap;
+}
+
+[data-tooltip]:hover::after {
+    transition-delay: .3s;
+    opacity: 1;
+    visibility: visible;
+  }
