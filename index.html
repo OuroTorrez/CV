@@ -7,7 +7,6 @@
     <meta name="description" content="Collection about Adrian Torrez professional credentials. Video game dev engenieering graduate with knowledge on web development.">
     <link rel="stylesheet" href="css/styleGlobal.css">
     <link rel="stylesheet" href="css/styleHome.css">
-    <script src="script.js"></script>
 
     <!-- Font awesome integration -->
     <script src="https://kit.fontawesome.com/e80de1fade.js" crossorigin="anonymous"></script>
@@ -38,9 +37,37 @@
                 <a class="SDIcon"><i class="fa-solid fa-chevron-down"></i></a>
                 <a class="SDIcon"><i class="fa-solid fa-chevron-down"></i></a>
             </div>
-            <a id="SD"><span>Scroll Down</span></a>
+            <a id="SD"><span><span class="FirstLetter">S</span>croll <span class="FirstLetter">D</span>own</span></a>
         </div>
     </header>
+    <content id="Content">
+        <h1>Hola</h1>
+    </content>
 </body>
 
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $('#ScrollDown').click(function () {
+        $('#Header, #Content').addClass('Scrolled');
+    });
+
+    $('.Home').click(function () {
+        $('#Header, #Content').removeClass('Scrolled');
+    });
+
+    $('#Header').mousewheel(function (e) {
+        if (e.deltaY < 0) {
+            $('#Header, #Content').addClass('Scrolled');
+            return false;
+        }
+    });
+    $(window).mousewheel(function (e) {
+        if ($('#Header.Scrolled').length) {
+            if ($(window).scrollTop() == 0 && e.deltaY > 0) {
+                $('#Header, #Content').removeClass('Scrolled');
+            }
+        }
+    });
+</script>

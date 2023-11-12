@@ -34,10 +34,28 @@ span, p, ul, li, i, a{
 }
 
 /* General Page Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--Background);
+}
+
+body * {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+    /* First Letter class */
 .FirstLetter {
     font-size: 120%;
 }
 
+    /* Tooltip */
 [data-tooltip] {
     position: relative;
 }
@@ -45,14 +63,15 @@ span, p, ul, li, i, a{
 [data-tooltip]::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: 100%;
+    bottom: 120%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--Surface);
+    background-color: #222222c0;
     color: var(--Primary);
+    font-weight: bold;
     border: var(--Primary) 2px solid;
-    border-radius: 10px;
-    padding: 2px 20px;
+    border-radius: 5px;
+    padding: 3px 10px;
     font-size: 1.1vw;
     opacity: 0;
     visibility: hidden;
