@@ -89,15 +89,20 @@ body * {
 
 #HeaderMenu {
     width: 100vw;
+    height: 0%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
     gap: 3vw;
+    position: sticky;
+    top: 0;
 }
 
 .HeaderMenuItem * {
     font-weight: bold;
+    text-decoration: none;
+    color: var(--OnBackground);
 }
 
 .HeaderMenuItem {
@@ -105,7 +110,7 @@ body * {
     font-size: 0.8vw;
     text-transform: uppercase;
     border-bottom: 3px solid transparent;
-    padding: 10px 0 5px 0;
+    padding: 10px 10px 5px 10px;
     cursor: pointer;
 }
 
@@ -117,4 +122,15 @@ body * {
 .HeaderMenuItem:hover {
     border-bottom: 3px solid var(--OnBackground);
     transition: all 0.3s ease;
+}
+
+.HeaderMenuItem:hover a, .HeaderMenuItem:hover a * {
+    color: var(--Primary);
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .HeaderMenuItem {
+        font-size: 3vw;
+    }
 }

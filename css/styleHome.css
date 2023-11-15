@@ -159,7 +159,6 @@
     top: 0;
     padding: 0;
     margin: 0;
-
 	transition: transform .6s cubic-bezier(0.86, 0, 0.07, 1), opacity .6s cubic-bezier(0.86, 0, 0.07, 1);
     opacity: 0;
 }
@@ -169,7 +168,10 @@
     transition: transform .6s cubic-bezier(0.86, 0, 0.07, 1), opacity .6s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-#Content * {
-    color: var(--OnBackground);
+.pic {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: auto;
 }
-
