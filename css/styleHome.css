@@ -168,3 +168,8 @@
 	opacity: 1;
     transition: transform .6s cubic-bezier(0.86, 0, 0.07, 1), opacity .6s cubic-bezier(0.86, 0, 0.07, 1);
 }
+
+#Content * {
+    color: var(--OnBackground);
+}
+

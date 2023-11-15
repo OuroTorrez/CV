@@ -41,6 +41,11 @@
         </div>
     </header>
     <content id="Content">
+        <header id="HeaderMenu">
+            <span data-text="Projects" class="HeaderMenuItem"><a href="projects.html" class="delayedLink"><span class="FirstLetter">P</span>rojects</a></span>
+            <span data-text="Home" class="HeaderMenuItem HeaderMenuItemActive"><a href="javascript:delayedLink('projects.html')" class="delayedLink"><span class="FirstLetter">H</span>ome</a></span>
+            <span data-text="Contact" class="HeaderMenuItem"><a href="#" class="delayedLink"><span class="FirstLetter">C</span>ontact</a></span>
+        </header>
         <h1>Hola</h1>
     </content>
 </body>
@@ -70,4 +75,8 @@
             }
         }
     });
+
+    function delayedLink (URL) {
+        setTimeout( function() { window.location = URL }, 2000 );
+    }
 </script>

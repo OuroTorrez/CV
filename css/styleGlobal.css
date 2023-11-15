@@ -83,4 +83,38 @@ body * {
     transition-delay: .3s;
     opacity: 1;
     visibility: visible;
-  }
+}
+
+    /* Header menu */
+
+#HeaderMenu {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 3vw;
+}
+
+.HeaderMenuItem * {
+    font-weight: bold;
+}
+
+.HeaderMenuItem {
+    color: var(--OnBackground);
+    font-size: 0.8vw;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    padding: 10px 0 5px 0;
+    cursor: pointer;
+}
+
+.HeaderMenuItemActive {
+    border-bottom: 3px solid var(--Primary);
+    transition: all 0.3s ease;
+}
+
+.HeaderMenuItem:hover {
+    border-bottom: 3px solid var(--OnBackground);
+    transition: all 0.3s ease;
+}
