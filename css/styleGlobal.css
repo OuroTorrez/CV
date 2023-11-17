@@ -34,6 +34,10 @@ span, p, ul, li, i, a{
 }
 
 /* General Page Styles */
+* {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
 
 html {
     scroll-behavior: smooth;
@@ -43,16 +47,32 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--Background);
-}
-
-body * {
-    box-sizing: border-box;
-    /* border: 1px solid red; */
+    overflow-x: hidden;
 }
 
     /* First Letter class */
 .FirstLetter {
     font-size: 120%;
+}
+
+    /* Scroller design */
+    
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: var(--Background);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: var(--Secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--Primary);
 }
 
     /* Tooltip */
@@ -87,9 +107,13 @@ body * {
 
     /* Header menu */
 
+#HeaderMenuContainer {
+    position: relative;
+    height: 0;
+}
+
 #HeaderMenu {
     width: 100vw;
-    height: 0%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -97,6 +121,7 @@ body * {
     gap: 3vw;
     position: sticky;
     top: 0;
+    z-index: 8;
 }
 
 .HeaderMenuItem * {
@@ -134,3 +159,4 @@ body * {
         font-size: 3vw;
     }
 }
+
