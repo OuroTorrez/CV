@@ -495,7 +495,7 @@ body {
 
 #AboutInfo {
     position: relative;
-    text-align: center;
+    /* text-align: center; */
     overflow: hidden;
     width: 0;
     min-height: 300px;
