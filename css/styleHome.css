@@ -252,18 +252,31 @@ img:nth-child(5) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%;
 }
 
 #AboutCardInfo > * {
     margin: 0;
-    padding: 10px;
+    padding: 5px;
 }
 
 #AboutCardInfo span > *{
     display: inline-block;
     margin: 0;
     padding: 0;
+    font-size: 1vw;
+    text-decoration: none;
+    color: var(--OnBackground);
+}
+
+#AboutCardInfo h3 {
+    color: var(--Primary);
+}
+
+#AboutCardInfo span > h3 {
+    text-transform: uppercase;
+    color: var(--Primary);
 }
 
 #AboutCardImage {
@@ -279,14 +292,21 @@ img:nth-child(5) {
     height: 100%;
 }
 
-#AboutCardIcons {
-    gap: 15px;
+#AboutCardInfo #AboutCardIcons > h3 {
+    color: var(--OnBackground);
 }
 
 #AboutCardIcons a{
     display: inline;
     color: var(--Primary);
     font-size: 2vw;
+    padding: 5px;
+    transition: all 0.6s ease;
+}
+
+#AboutCardIcons a:hover {
+    color: var(--OnBackground);
+    transition: all 0.6s ease;
 }
 
 #AboutCardText {
