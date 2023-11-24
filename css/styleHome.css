@@ -242,9 +242,19 @@ img:nth-child(5) {
     z-index: 1;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 70vw;
+    flex-wrap: nowrap;
+    width: 60vw;
+    height: 50vh;
+}
+
+#AboutCard:hover > #AboutCardInfo{
+    width: 100%;
+    transition: all 0.6s ease;
+}
+
+#AboutCard:hover > #AboutCardText{
+    width: 0%;
+    transition: all 0.6s ease;
 }
 
 #AboutCardInfo {
@@ -253,7 +263,10 @@ img:nth-child(5) {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.6s ease;
 }
 
 #AboutCardInfo > * {
@@ -286,8 +299,6 @@ img:nth-child(5) {
 }
 
 #AboutCardImage img{
-    margin: 0;
-    padding: 0;
     width: auto;
     height: 100%;
 }
@@ -314,4 +325,8 @@ img:nth-child(5) {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.6s ease;
 }
