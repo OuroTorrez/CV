@@ -63,7 +63,6 @@
 #Icons a {
     transition: all .2s ease;
     cursor: pointer;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
 }
 
 #Icons a:hover {
@@ -243,13 +242,28 @@ img:nth-child(5) {
 #AboutCard {
     z-index: 1;
     width: 70vw;
-    height: 60vh;
+    height: 55vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-#AboutContainer {
+#AboutCard:hover #AboutCardInfoContainer {
     width: 100%;
+    transition: all .6s;
+}
+
+#AboutCard:hover #AboutCardTextContainer {
+    width: 0%;
+    transition: all .6s;
+}
+
+#AboutCardInfoContainer {
+    width: 0%;
     height: 100%;
     overflow: hidden;
+    transition: all .6s;
 }
 
 #AboutCardInfo {
@@ -257,18 +271,24 @@ img:nth-child(5) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: inherit;
-    height: 100%;
+    white-space: nowrap;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-100%);
+    width: initial;
+    height: initial;
 }
 
 #AboutCardInfo h1 {
     margin: 0;
     padding: 10px;
+    text-transform: uppercase;
 }
 
 #AboutCardInfo h3 {
     margin: 0;
     padding: 5px;
+    text-transform: uppercase;
     color: var(--Primary);
 }
 
@@ -280,12 +300,12 @@ img:nth-child(5) {
     display: inline;
     text-decoration: none;
     color: var(--OnBackground);
-    font-size: 1.3vw;
 }
 
 .AboutCardInfoDetail h3 {
     color: var(--Primary);
     text-transform: uppercase;
+    font-size: 90%;
 }
 
 #AboutCardInfoIcons {
@@ -293,11 +313,13 @@ img:nth-child(5) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 15px;
 }
 
 #AboutCardInfoIcons h3 {
-    font-size: 1.3vw;
+    margin-top: 10px;
+    padding: 0;
+    font-size: 90%;
     color: var(--OnBackground);
     text-transform: uppercase;
 }
@@ -307,12 +329,29 @@ img:nth-child(5) {
     font-size: 2vw;
     padding: 5px;
     transition: all .2s ease;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
 }
 
 #AboutCardIcons a:hover {
     color: var(--OnBackground);
     transition: all .2s ease;
+}
+
+#AboutCardImage {
+    width: auto;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+#AboutCardTextContainer {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+    transition: all .6s;
+    background-color: var(--Surface);
+    
 }
 
 /*
