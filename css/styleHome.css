@@ -240,118 +240,147 @@ img:nth-child(5) {
 /* About Card */
 
 #AboutCard {
+    position: relative;
+    display: flex;
+    flex-direction: row;
     z-index: 1;
-    width: 70vw;
-    height: 55vh;
+    padding: 20px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    background-color: var(--Surface);
+    width: 60vw;
+    height: 50vh;
+}
+
+#AboutCard:hover > #About #AboutCardImage{
+    left: 100%;
+    transition: all .6s ease;
+}
+
+#AboutCard:hover > #About #AboutMe { 
+    width: 0;
+    transition: all .6s ease;
+}
+
+#AboutCard:hover > #About #AboutCardInfoContainer {
+    width: 555px;
+    transition: all .6s ease;
+}
+
+#About {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-}
-
-#AboutCard:hover #AboutCardInfoContainer {
     width: 100%;
-    transition: all .6s;
-}
-
-#AboutCard:hover #AboutCardTextContainer {
-    width: 0%;
-    transition: all .6s;
-}
-
-#AboutCardInfoContainer {
-    width: 0%;
-    height: 100%;
-    overflow: hidden;
-    transition: all .6s;
-}
-
-#AboutCardInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-100%);
-    width: initial;
-    height: initial;
-}
-
-#AboutCardInfo h1 {
-    margin: 0;
-    padding: 10px;
-    text-transform: uppercase;
-}
-
-#AboutCardInfo h3 {
-    margin: 0;
-    padding: 5px;
-    text-transform: uppercase;
-    color: var(--Primary);
-}
-
-.AboutCardInfoDetail {
-    padding: 5px;
-}
-
-.AboutCardInfoDetail > *{
-    display: inline;
-    text-decoration: none;
-    color: var(--OnBackground);
-}
-
-.AboutCardInfoDetail h3 {
-    color: var(--Primary);
-    text-transform: uppercase;
-    font-size: 90%;
-}
-
-#AboutCardInfoIcons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-#AboutCardInfoIcons h3 {
-    margin-top: 10px;
     padding: 0;
-    font-size: 90%;
-    color: var(--OnBackground);
-    text-transform: uppercase;
-}
-
-#AboutCardIcons a{
-    color: var(--Primary);
-    font-size: 2vw;
-    padding: 5px;
-    transition: all .2s ease;
-}
-
-#AboutCardIcons a:hover {
-    color: var(--OnBackground);
-    transition: all .2s ease;
+    margin: 0;
+    left: 0;
 }
 
 #AboutCardImage {
-    width: auto;
-    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
     border-radius: 5px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    z-index: 2;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+    transition: all .6s ease;
 }
 
-#AboutCardTextContainer {
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+#AboutMe h1 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#AboutMe h1::first-letter {
+    font-size: 25px;
+}
+
+#AboutMe {
     overflow: hidden;
-    transition: all .6s;
-    background-color: var(--Surface);
-    
+    position: absolute;
+    width: 590px;
+    min-height: 300px;
+    max-height: 300px;
+    right: 0;
+    transition: all .6s ease;
+}
+
+#AboutMe div {
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    text-align: justify;
+    min-width: 550px;
+    max-width: 550px;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+#AboutCardInfo span h1 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#AboutCardInfo span h1::first-letter {
+    font-size: 25px;
+}
+
+#AboutCardInfo span h3 {
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#AboutCardInfo span h3::first-letter {
+    font-size: 20px;
+}
+
+#AboutCardInfoContainer {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    width: 0;
+    min-height: 300px;
+    max-height: 300px;
+    padding: 0;
+    margin: 0;
+    right: 0;
+    transition: all .6s ease;
+}
+
+#AboutCardInfoContainer #AboutCardInfo span > *{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--OnBackground);
+    padding: 0;
+    margin: 0;
+}
+
+#AboutCardInfoContainer #AboutCardInfo {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0px;
+    row-gap: 0px;
+    min-width: 555px;
+    max-width: 555px;
+    min-height: 300px;
+    max-height: 300px;
 }
 
 /*
