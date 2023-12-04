@@ -250,6 +250,11 @@ img:nth-child(5) {
     transition: all .6s ease;
 }
 
+#AboutCard:hover #AboutCardInfoContainer {
+    width: 0%;
+    transition: all .6s ease;
+}
+
 #About {
     position: relative;
     display: flex;
@@ -257,9 +262,87 @@ img:nth-child(5) {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
     left: 0;
+}
+
+#AboutCardInfoContainer {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#AboutCardInfo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all;
+    overflow: hidden;
+}
+
+#AboutCardInfo h1 {
+    margin: 0;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+#AboutCardInfo h3 {
+    margin: 0;
+    padding: 0;
+    color: var(--Primary);
+    text-transform: uppercase;
+}
+
+.AboutCardInfoDetail > * {
+    display: inline;
+    text-decoration: none;
+    color: var(--OnBackground);
+    font-size: 1vw;
+}
+
+.AboutCardInfoDetail h3 {
+    color: var(--Primary);
+    text-transform: uppercase;
+    font-size: 95%;
+}
+
+#AboutCardInfoIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+}
+
+#AboutCardIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+#AboutCardIcons a{
+    color: var(--OnBackground);
+    text-decoration: none;
+    padding: 5px;
+    font-size: 150%;
+}
+
+#AboutCardTextContainer {
+    width: 0;
+    max-height: 100px;
+    overflow: hidden;
 }
 
 /*
