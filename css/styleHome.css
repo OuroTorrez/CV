@@ -320,7 +320,7 @@ img:nth-child(5) {
 .AboutCardInfoDetail h3 {
     color: var(--Primary);
     text-transform: uppercase;
-    font-size: 85%;
+    font-size: 90%;
 }
 
 #AboutCardInfoIcons {
@@ -339,14 +339,20 @@ img:nth-child(5) {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 #AboutCardIcons a{
     color: var(--OnBackground);
     text-decoration: none;
-    padding: 5px;
-    font-size: 150%;
+    padding: 0px 7px;
+    font-size: 180%;
+    transition: all .2s ease-out;
+}
+
+#AboutCardIcons a:hover{
+    transition: all .2s ease-out;
+    color: var(--Primary);
 }
 
 #AboutCardImage {
