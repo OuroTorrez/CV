@@ -89,45 +89,48 @@ i {
 }
 
     /* Buttons styles */
-
 .PrimaryButton {
-    background-color: var(--OnBackground);
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
-    transition: all .2s ease-out;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+    border-radius: 10px;
+    background-color: var(--Primary);
+    border: none;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+}
+   
+.ButtonIcon, .ButtonText {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: all .3s;
 }
 
-.PrimaryButton > * {
-    border: 1px solid green;
+.ButtonText * {
+    font-weight: bold;
 }
-
-.PrimaryButton:hover {
+   
+.ButtonIcon {
+    -webkit-text-stroke: 1px;
+    position: absolute;
+    inset: 0;
     background-color: var(--Secondary);
-    transition: all .2s ease-out;
+    transform: translate(0%,100%);
+    border-radius: 100%;
+}
+   
+.PrimaryButton:hover .ButtonText {
+    transform: translate(0%,-100%);
+}
+   
+.PrimaryButton:hover .ButtonIcon {
+    border-radius: 10px;
+    transform: translate(0%,0%);
 }
 
 .PrimaryButton:active {
-    background-color: var(--Primary);
-    transition: all .2s ease-out;
+    transform: scale(0.95);
 }
 
-.ButtonIcon {
-    display: inline;
-    color: var(--Primary);
-    font-size: 120%;
-}
-
-.ButtonText {
-    display: inline;
-    color: var(--Primary);
-}
     /* Tooltip */
 [data-tooltip] {
     position: relative;
