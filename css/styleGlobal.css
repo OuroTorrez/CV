@@ -153,7 +153,6 @@ i {
     visibility: hidden;
     transition: all .2s ease-out;
     white-space: nowrap;
-    box-shadow: 0px 0px 2px #f8f8ff87;
 }
 
 [data-tooltip]:hover::after {
@@ -178,7 +177,7 @@ i {
     gap: 3vw;
     position: sticky;
     top: 0;
-    z-index: 8;
+    z-index: 7;
 }
 
 .HeaderMenuItem * {
@@ -225,3 +224,59 @@ i {
     background-color: var(--Surface);
     color: var(--OnBackground);
 }
+
+/* Floating window styles */
+
+.FloatingWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+    z-index: 8;
+}
+
+.FloatingWindowControl {
+    background-color: var(--Primary);
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FloatingWindowContentHeaderTitle {
+    margin: 0;
+    padding: 0;
+    color: var(--OnBackground);
+    text-transform: uppercase;
+}
+
+.FloatingWindowControl i {
+    background-color: var(--Background);
+    color: var(--OnBackground);
+    -webkit-text-stroke: 1px;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+.FloatingWindowContent {
+    background-color: var(--Surface);
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.FloatingWindowPDF {
+    width: 50vw;
+    height: 60vh;
+}
+

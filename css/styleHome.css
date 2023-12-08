@@ -50,7 +50,6 @@
     width: 100%;
     margin-top: 2%;
     font-size: 3vw;
-    color: var(--OnBackground);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -61,6 +60,8 @@
 }
 
 #Icons a {
+    color: var(--OnBackground);
+    text-decoration: none;
     transition: all .2s ease;
     cursor: pointer;
 }
@@ -245,9 +246,14 @@ img:nth-child(5) {
     padding: 20px;
     border-radius: 5px;
     background-color: var(--Surface);
-    width: 800px;
-    height: 400px;
+    width: 850px;
+    height: 450px;
     transition: all .6s ease;
+}
+
+#AboutCard:hover #AboutCardHoverIcon {
+    opacity: 0;
+    transition: all .2s;
 }
 
 @media screen and (min-width: 1024px) {
@@ -276,6 +282,17 @@ img:nth-child(5) {
     left: 0;
 }
 
+#AboutCardHoverIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    color: var(--Primary);
+    font-size: 150%;
+    rotate: -30deg;
+    transition: all .2s;
+}
+
 #AboutCardInfoContainer {
     overflow: hidden;
     clip-path: inset(0);
@@ -286,7 +303,7 @@ img:nth-child(5) {
 
 #AboutCardInfo {
     position: absolute;
-    width: 68%;
+    width: 65%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -383,7 +400,7 @@ img:nth-child(5) {
 
 #AboutCardText {
     position: absolute;
-    width: 68%;
+    width: 65%;
     height: 100%;
     display: flex;
     flex-direction: column;
