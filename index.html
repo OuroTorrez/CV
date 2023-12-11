@@ -49,13 +49,16 @@
         </div>
     </header>
     <content id="Content">
-        <div class="FloatingWindow">
-            <div class="FloatingWindowControl">
-                <h3 class="FloatingWindowContentHeaderTitle"><span class="FirstLetter">C</span>urrículum <span class="FirstLetter">V</span>itae</h3>
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-            <div class="FloatingWindowContent">
-                <embed src="Media/CV English.pdf" class="FloatingWindowPDF">
+        <div class="FloatingWindowBackground">
+            <div class="FloatingWindow">
+                <div class="FloatingWindowControl">
+                    <h3 class="FloatingWindowContentHeaderTitle"><span class="FirstLetter">C</span>urrículum <span class="FirstLetter">V</span>itae</h3>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="FloatingWindowContent">
+                    <embed src="Media/CV English.pdf" class="FloatingWindowPDF"></embed>
+                    <span>Updated: 09/12/2023</span>
+                </div>
             </div>
         </div>
         <header id="HeaderMenuContainer">
@@ -118,7 +121,7 @@
                                     <a data-tooltip="Code Pen" href="https://codepen.io/Towerrz" target="_blank" class="LinkIcons"><i
                                             class="fa-brands fa-codepen"></i></a>
                                 </div>
-                                <button class="PrimaryButton">
+                                <button class="PrimaryButton DownloadCV">
                                     <div class="ButtonText">
                                         <span><span class="FirstLetter">C</span>urriculum <span
                                                 class="FirstLetter">V</span>itae</span>
@@ -193,4 +196,18 @@
     function delayedLink(URL) {
         setTimeout(function () { window.location = URL }, 2000);
     }
+
+
+    $('.FloatingWindowControl i').click(function () {
+        $('.FloatingWindowBackground').fadeOut(200);
+    });
+
+    $('.FloatingWindowBackground').click(function () {
+        $('.FloatingWindowBackground').fadeOut(200);
+    });
+
+    $('.DownloadCV').click(function () {
+        $('.FloatingWindowBackground').fadeIn(200);
+        $('.FloatingWindowBackground .FloatingWindow').addClass('FloatingWindowActive');
+    });
 </script>
