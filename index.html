@@ -8,7 +8,6 @@
         content="Collection about Adrian Torrez professional credentials. Video game dev engenieering graduate with knowledge on web development.">
     <link rel="stylesheet" href="css/styleGlobal.css">
     <link rel="stylesheet" href="css/styleHome.css">
-
     <!-- Font awesome integration -->
     <script src="https://kit.fontawesome.com/e80de1fade.js" crossorigin="anonymous"></script>
     <!-- Bootstrap integration -->
@@ -52,8 +51,8 @@
         <div class="FloatingWindowBackground">
             <div class="FloatingWindow">
                 <div class="FloatingWindowControl">
-                    <h3 class="FloatingWindowContentHeaderTitle"><span class="FirstLetter">C</span>urrículum <span class="FirstLetter">V</span>itae</h3>
-                    <i class="fa-solid fa-xmark"></i>
+                    <h3><span class="FirstLetter">C</span>urrículum <span class="FirstLetter">V</span>itae</h3>
+                    <i class="fa-solid fa-xmark CloseFloatingWindow"></i>
                 </div>
                 <div class="FloatingWindowContent">
                     <embed src="Media/CV English.pdf" class="FloatingWindowPDF"></embed>
@@ -198,13 +197,19 @@
     }
 
 
-    $('.FloatingWindowControl i').click(function () {
-        $('.FloatingWindowBackground').fadeOut(200);
-    });
+    $('.CloseFloatingWindow').click(function (event) {
+    event.stopPropagation(); // Stop propagation to prevent the click from reaching FloatingWindowBackground
+    $('.FloatingWindowBackground').fadeOut(200);
+});
 
-    $('.FloatingWindowBackground').click(function () {
-        $('.FloatingWindowBackground').fadeOut(200);
-    });
+$('.FloatingWindowBackground').click(function () {
+    $('.FloatingWindowBackground').fadeOut(200);
+});
+
+$('.FloatingWindow').click(function (event) {
+    event.stopPropagation(); // Stop propagation to prevent the click from reaching FloatingWindowBackground
+});
+
 
     $('.DownloadCV').click(function () {
         $('.FloatingWindowBackground').fadeIn(200);
