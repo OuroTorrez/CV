@@ -65,11 +65,15 @@ body {
     height: 100vh;
     background-color: var(--Background);
     z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
+    clip-path: inset(0);
+}
+
+#LoadingScreenLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes LoadingScreenAppear {
@@ -77,15 +81,21 @@ body {
         width: 0;
         height: 0;
     }
+
+    10% {
+        border-bottom-right-radius: 100%;
+    }
+
     100% {
         width: 100vw;
         height: 100vh;
+        border-bottom-right-radius: 0;
     }
 }
 
 .LoadingScreenAppear {
     animation-name: LoadingScreenAppear;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
 }
 
@@ -93,7 +103,13 @@ body {
     0% {
         width: 100vw;
         height: 100vh;
+        border-bottom-right-radius: 0;
     }
+
+    10% {
+        border-bottom-right-radius: 50%;
+    }
+
     100% {
         width: 0;
         height: 0;
@@ -380,3 +396,11 @@ i {
     padding: 0;
 }
 
+@media only screen and (min-width: 1025px) {
+    /* phones */
+    .FloatingWindow {
+        width: 100vw;
+        height: 100vw;
+        padding: 0;
+    }
+}

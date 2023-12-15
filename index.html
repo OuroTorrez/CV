@@ -199,7 +199,7 @@
     });
 
     function delayedLink(URL) {
-        setTimeout(function () { window.location = URL }, 2000);
+        setTimeout(function () { window.location = URL }, 510);
     }
 
 
@@ -222,16 +222,17 @@
         $('.FloatingWindowBackground .FloatingWindow').addClass('FloatingWindowActive');
     });
 
-    function AppearLoadingScreen () {
-        console.log('Span clicked!');
-        $('#LoadingScreen').removeClass('loadingScreenDisappear');
-        $('#LoadingScreen').addClass('LoadingScreenAppear');
-    }
+    function AppearLoadingScreen() {
+    console.log('Span clicked!');
+    $('#LoadingScreen').removeClass('LoadingScreenDisappear'); // Correct class name
+    $('#LoadingScreen').addClass('LoadingScreenAppear');
+}
 
-    window.onload = function () {
-        setTimeout(function () {
-            $('#LoadingScreen').removeClass('loadingScreenAppear');
-            $('#LoadingScreen').addClass('LoadingScreenDisappear');
-        }, 500);
-    }
+window.onload = function() {
+    setTimeout(function() {
+        $('#LoadingScreen').removeClass('LoadingScreenAppear');
+        $('#LoadingScreen').addClass('LoadingScreenDisappear');
+    }, 500);
+}
+
 </script>
