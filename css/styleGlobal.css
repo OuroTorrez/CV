@@ -56,6 +56,56 @@ body {
     overflow-x: hidden;
 }
 
+/* Loading screen */
+#LoadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Background);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes LoadingScreenAppear {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.LoadingScreenAppear {
+    animation-name: LoadingScreenAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes LoadingScreenDisappear {
+    0% {
+        width: 100vw;
+        height: 100vh;
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
+
+.LoadingScreenDisappear {
+    animation-name: LoadingScreenDisappear;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
     /* First Letter class */
 .FirstLetter {
     font-size: 120%;
@@ -180,7 +230,7 @@ i {
     z-index: 6;
 }
 
-.HeaderMenuItem * {
+.HeaderMenuItem {
     font-weight: bold;
     text-decoration: none;
     color: var(--OnBackground);
@@ -252,6 +302,8 @@ i {
 
 @keyframes FloatingWindowActive {
     0% {
+        width: 0;
+        height: 0;
         top: -50%;
         left: 0%;
         transform: scale3d(0.5, 0.5, 0.5);
@@ -259,6 +311,8 @@ i {
     100% {
         top: 50%;
         left: 50%;
+        width: 70vw;
+        height: 70vh;
         transform: scale3d(1, 1, 1);
         transform: translate(-50%, -50%);
     }

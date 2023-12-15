@@ -21,6 +21,9 @@
 </head>
 
 <body>
+    <div id="LoadingScreen">
+        <img id="LoadingScreenLogo" src="https://picsum.photos/192/192">
+    </div>
     <header id="Header">
         <h1 id="Title"><span class="FirstLetter">A</span>drian <span class="FirstLetter">T</span>orrez</h1>
         <h5 id="Subtitle"><span class="FirstLetter">V</span>ideo<span class="FirstLetter">G</span>ame <span
@@ -62,12 +65,15 @@
         </div>
         <header id="HeaderMenuContainer">
             <div id="HeaderMenu">
-                <span class="HeaderMenuItem"><a href="javascript:delayedLink('projects.html')" class="delayedLink"><span
-                            class="FirstLetter">P</span>rojects</a></span>
-                <span class="HeaderMenuItem HeaderMenuItemActive"><a href="javascript:delayedLink('index.html')"
-                        class="delayedLink"><span class="FirstLetter">H</span>ome</a></span>
-                <span class="HeaderMenuItem"><a href="javascript:delayedLink('contact.html')" class="delayedLink"><span
-                            class="FirstLetter">C</span>ontact</a></span>
+                <a href="javascript:delayedLink('projects.html')" class="delayedLin HeaderMenuItem">
+                    <span class="FirstLetter">P</span>rojects
+                </a>
+                <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('index.html')" class="delayedLink HeaderMenuItem HeaderMenuItemActive">
+                    <span class="FirstLetter">H</span>ome
+                </a>
+                <a href="javascript:delayedLink('contact.html')" class="delayedLink HeaderMenuItem">
+                    <span class="FirstLetter">C</span>ontact
+                </a>
             </div>
         </header>
         <section class="pic-ctn" id="Slider">
@@ -113,12 +119,12 @@
                                     <a data-tooltip="Instagram"><i class="fa-brands fa-instagram"></i></a>
                                     <a data-tooltip="Twitter"><i class="fa-brands fa-twitter"></i></a>
                                     -->
-                                    <a data-tooltip="GitHub" href="https://github.com/OuroTorrez" target="_blank" class="LinkIcons"><i
-                                            class="fa-brands fa-github"></i></a>
-                                    <a data-tooltip="Mail me" href="mailto: mineadriantorrez@gmail.com"
-                                        target="_blank" class="LinkIcons"><i class="bi bi-envelope-at"></i></a>
-                                    <a data-tooltip="Code Pen" href="https://codepen.io/Towerrz" target="_blank" class="LinkIcons"><i
-                                            class="fa-brands fa-codepen"></i></a>
+                                    <a data-tooltip="GitHub" href="https://github.com/OuroTorrez" target="_blank"
+                                        class="LinkIcons"><i class="fa-brands fa-github"></i></a>
+                                    <a data-tooltip="Mail me" href="mailto: mineadriantorrez@gmail.com" target="_blank"
+                                        class="LinkIcons"><i class="bi bi-envelope-at"></i></a>
+                                    <a data-tooltip="Code Pen" href="https://codepen.io/Towerrz" target="_blank"
+                                        class="LinkIcons"><i class="fa-brands fa-codepen"></i></a>
                                 </div>
                                 <button class="PrimaryButton DownloadCV">
                                     <div class="ButtonText">
@@ -198,21 +204,34 @@
 
 
     $('.CloseFloatingWindow').click(function (event) {
-    event.stopPropagation(); // Stop propagation to prevent the click from reaching FloatingWindowBackground
-    $('.FloatingWindowBackground').fadeOut(200);
-});
+        event.stopPropagation(); // Stop propagation to prevent the click from reaching FloatingWindowBackground
+        $('.FloatingWindowBackground').fadeOut(200);
+    });
 
-$('.FloatingWindowBackground').click(function () {
-    $('.FloatingWindowBackground').fadeOut(200);
-});
+    $('.FloatingWindowBackground').click(function () {
+        $('.FloatingWindowBackground').fadeOut(200);
+    });
 
-$('.FloatingWindow').click(function (event) {
-    event.stopPropagation(); // Stop propagation to prevent the click from reaching FloatingWindowBackground
-});
+    $('.FloatingWindow').click(function (event) {
+        event.stopPropagation(); // Stop propagation to prevent the click from reaching FloatingWindowBackground
+    });
 
 
     $('.DownloadCV').click(function () {
         $('.FloatingWindowBackground').fadeIn(200);
         $('.FloatingWindowBackground .FloatingWindow').addClass('FloatingWindowActive');
     });
+
+    function AppearLoadingScreen () {
+        console.log('Span clicked!');
+        $('#LoadingScreen').removeClass('loadingScreenDisappear');
+        $('#LoadingScreen').addClass('LoadingScreenAppear');
+    }
+
+    window.onload = function () {
+        setTimeout(function () {
+            $('#LoadingScreen').removeClass('loadingScreenAppear');
+            $('#LoadingScreen').addClass('LoadingScreenDisappear');
+        }, 500);
+    }
 </script>
