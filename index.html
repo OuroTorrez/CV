@@ -58,7 +58,7 @@
                     <i class="fa-solid fa-xmark CloseFloatingWindow"></i>
                 </div>
                 <div class="FloatingWindowContent">
-                    <iframe src="Media/CV English.pdf" class="FloatingWindowPDF"></iframe>
+                    <object data="Media/CV English.pdf" type="application/pdf" class="FloatingWindowPDF"></object>
                     <span>Updated: 09/12/2023</span>
                 </div>
             </div>
@@ -206,10 +206,12 @@
     $('.CloseFloatingWindow').click(function (event) {
         event.stopPropagation(); // Stop propagation to prevent the click from reaching FloatingWindowBackground
         $('.FloatingWindowBackground').fadeOut(200);
+        $('.FloatingWindow').toggleClass('FloatingWindowActive');
     });
 
     $('.FloatingWindowBackground').click(function () {
         $('.FloatingWindowBackground').fadeOut(200);
+        $('.FloatingWindow').toggleClass('FloatingWindowActive');
     });
 
     $('.FloatingWindow').click(function (event) {
@@ -219,7 +221,7 @@
 
     $('.DownloadCV').click(function () {
         $('.FloatingWindowBackground').fadeIn(200);
-        $('.FloatingWindowBackground .FloatingWindow').addClass('FloatingWindowActive');
+        $('.FloatingWindow').toggleClass('FloatingWindowActive');
     });
 
     function AppearLoadingScreen() {
