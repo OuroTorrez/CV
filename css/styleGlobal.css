@@ -385,7 +385,7 @@ i {
     /* phones */
     .FloatingWindow {
         width: 100vw;
-        height: 60vh;
+        height: 100vw;
         padding: 0;
     }
 }
