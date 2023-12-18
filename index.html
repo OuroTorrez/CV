@@ -58,23 +58,24 @@
                     <i class="fa-solid fa-xmark CloseFloatingWindow"></i>
                 </div>
                 <div class="FloatingWindowContent">
-                    <object data="Media/CV English.pdf" type="application/pdf" class="FloatingWindowPDF">
-                        
-                    </object>
+                    <object data="Media/CV English.pdf" type="application/pdf" class="FloatingWindowPDF"></object>
                     <span>Updated: 09/12/2023</span>
                 </div>
             </div>
         </div>
         <header id="HeaderMenuContainer">
             <div id="HeaderMenu">
-                <a href="javascript:delayedLink('projects.html')" class="delayedLin HeaderMenuItem">
+                <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('projects.html')"
+                    class="delayedLin HeaderMenuItem">
                     <span class="FirstLetter">P</span>rojects
                 </a>
-                <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('index.html')" class="delayedLink HeaderMenuItem HeaderMenuItemActive">
+                <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('index.html')"
+                    class="delayedLink HeaderMenuItem HeaderMenuItemActive">
                     <span class="FirstLetter">H</span>ome
                 </a>
-                <a href="javascript:delayedLink('contact.html')" class="delayedLink HeaderMenuItem">
-                    <span class="FirstLetter">C</span>ontact
+                <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('about.html')"
+                    class="delayedLink HeaderMenuItem">
+                    <span class="FirstLetter">A</span>bout <span class="FirstLetter">M</span>e
                 </a>
             </div>
         </header>
@@ -204,9 +205,8 @@
         setTimeout(function () { window.location = URL }, 510);
     }
 
-
     $('.CloseFloatingWindow').click(function (event) {
-        event.stopPropagation(); // Stop propagation to prevent the click from reaching FloatingWindowBackground
+        event.stopPropagation();
         $('.FloatingWindowBackground').fadeOut(200);
         $('.FloatingWindow').toggleClass('FloatingWindowActive');
     });
@@ -217,9 +217,8 @@
     });
 
     $('.FloatingWindow').click(function (event) {
-        event.stopPropagation(); // Stop propagation to prevent the click from reaching FloatingWindowBackground
+        event.stopPropagation(); //
     });
-
 
     $('.DownloadCV').click(function () {
         $('.FloatingWindowBackground').fadeIn(200);
@@ -227,16 +226,16 @@
     });
 
     function AppearLoadingScreen() {
-    console.log('Span clicked!');
-    $('#LoadingScreen').removeClass('LoadingScreenDisappear'); // Correct class name
-    $('#LoadingScreen').addClass('LoadingScreenAppear');
-}
+        console.log('Span clicked!');
+        $('#LoadingScreen').removeClass('LoadingScreenDisappear'); // Correct class name
+        $('#LoadingScreen').addClass('LoadingScreenAppear');
+    }
 
-window.onload = function() {
-    setTimeout(function() {
-        $('#LoadingScreen').removeClass('LoadingScreenAppear');
-        $('#LoadingScreen').addClass('LoadingScreenDisappear');
-    }, 500);
-}
+    window.onload = function () {
+        setTimeout(function () {
+            $('#LoadingScreen').removeClass('LoadingScreenAppear');
+            $('#LoadingScreen').addClass('LoadingScreenDisappear');
+        }, 500);
+    }
 
 </script>

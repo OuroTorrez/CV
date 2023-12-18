@@ -250,15 +250,12 @@ i {
     font-weight: bold;
     text-decoration: none;
     color: var(--OnBackground);
-}
-
-.HeaderMenuItem {
-    color: var(--OnBackground);
-    font-size: 10px;
     text-transform: uppercase;
     border-bottom: 3px solid transparent;
     padding: 10px 10px 5px 10px;
     cursor: pointer;
+    font-size: 10px;
+    letter-spacing: 1px;
 }
 
 .HeaderMenuItemActive {
@@ -275,10 +272,19 @@ i {
     color: var(--Primary);
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (max-width: 1025px) {
     /* phones */
     .HeaderMenuItem {
-        font-size: 1vw;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+}
+
+@media only screen and (min-width: 1921px) {
+    /* phones */
+    .HeaderMenuItem {
+        font-size: 15px;
+        letter-spacing: 1px;
     }
 }
 
@@ -385,7 +391,7 @@ i {
     /* phones */
     .FloatingWindow {
         width: 100vw;
-        height: 100vw;
+        height: 130vw;
         padding: 0;
     }
 }
