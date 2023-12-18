@@ -11,20 +11,19 @@
 }
 
 /* Font control */
+
 @font-face {
     font-family: 'Text';
     src: url("/Fonts/Poppins/Poppins-Regular.ttf") format("ttf");
 }
 
 @font-face {
-    font-family: 'Titles';
-    src: url("/Fonts/Edu_TAS_Beginner/EduTASBeginner-VariableFont_wght.ttf") format("ttf");
+    font-family: 'Titles', sans-serif;
+    src: url("/Fonts/Edu_TAS_Beginner/EduTASBeginner-VariableFont_wght.ttf") format('ttf');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Titles', sans-serif;
+    font-family: 'Titles', sans-serif;
 	font-weight: 600;
 }
 
@@ -126,6 +125,7 @@ body {
 .FirstLetter {
     font-size: 120%;
     font-weight: inherit;
+    font-family: inherit;
     color: inherit;
 }
 
