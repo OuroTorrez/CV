@@ -327,7 +327,7 @@ i {
     top: 50%;
     left: 50%;
     width: 70vw;
-    height: 70vh;
+    height: 85vh;
     transform: translate(-50%, -50%);
     transition: all .3s;
 }
