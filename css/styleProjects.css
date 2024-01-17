@@ -15,8 +15,8 @@
 }
 
 .ProjectInfo {
-    background-color: rgba(var(--ProjectInfoBGColor), 0.5);
-    padding-top: 15%;
+    background-color: rgba(var(--ProjectInfoBGColor), 0.7);
+    padding-top: 13%;
     padding-left: 10%;
     display: flex;
     flex-direction: column;
@@ -24,12 +24,12 @@
     align-items: flex-start;
     width: 45%;
     height: 100%;
-    transition: all 1s;
+    transition: all .5s;
 }
 
 .ProjectInfo:hover {
-    background-color: rgba(var(--ProjectInfoBGColor), 0.7);
-    transition: all 1s;
+    background-color: rgba(var(--ProjectInfoBGColor), 0.8);
+    transition: all .5s;
 }
 
 .ProjectInfo h1 {
@@ -39,5 +39,17 @@
 
 .ProjectIcons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+}
+
+.PIcons i{
+    text-shadow: none;
+}
+
+.ProjectDescription {
+    margin-top: 50px;
+}
+
+.ProjectLink {
+    color: white;
 }
