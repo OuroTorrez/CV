@@ -11,6 +11,7 @@
 }
 
 /* Font control */
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700;800&display=swap');
 
 @font-face {
     font-family: 'Text';
@@ -23,8 +24,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Titles', sans-serif;
-	font-weight: 600;
+    font-family: 'Sono', monospace;
 }
 
 span, p, ul, li, i, a{
@@ -128,6 +128,23 @@ body {
     font-family: inherit;
     color: inherit;
 }
+
+/* Type writer styles */
+.TypewriterEffect {
+    border-right: transparent 3px solid;
+    overflow: hidden;
+    animation: blinkTextCursor 500ms steps(var(--Steps)) infinite normal;
+}
+
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 100%;}
+  }
+
+@keyframes blinkTextCursor{
+    from{border-right-color: var(--Primary);}
+    to{border-right-color: transparent;}
+  }
 
     /* Scroller design */
     
