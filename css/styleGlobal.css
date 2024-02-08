@@ -131,9 +131,13 @@ body {
 
 /* Type writer styles */
 .TypewriterEffect {
+    white-space: nowrap;
+    width: fit-content;
+    display: inline-block;
+    overflow: hidden;
     border-right: transparent 3px solid;
     overflow: hidden;
-    animation: blinkTextCursor 500ms steps(var(--Steps)) infinite normal;
+    animation: typewriter 4s steps(var(--Steps)) 1s 1 normal both, blinkTextCursor 500ms steps(var(--Steps)) infinite normal;
 }
 
 @keyframes typewriter{
