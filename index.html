@@ -26,17 +26,14 @@
             <img id="LoadingScreenLogo" src="https://picsum.photos/192/192">
         </div>
     -->
+    <!-- Hero header -->
     <header id="Header">
         <h1 id="Title"><span class="FirstLetter">A</span>drian <span class="FirstLetter">T</span>orrez</h1>
-        <h5 id="Subtitle"><span class="FirstLetter">V</span>ideo<span class="FirstLetter">G</span>ame <span
+        <h5 id="Subtitle"  class="TypewriterEffect" style="--Steps: 20"><span class="FirstLetter">V</span>ideo<span class="FirstLetter">G</span>ame <span
                 class="FirstLetter">D</span>eveloper</h5>
         <div id="Icons">
             <a data-tooltip="LinkedIn" href="https://www.linkedin.com/in/adrian-torrez-beltran/" target="_blank"><i
                     class="fa-brands fa-linkedin"></i></a>
-            <!--
-            <a data-tooltip="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a data-tooltip="Twitter"><i class="fa-brands fa-twitter"></i></a>
-            -->
             <a data-tooltip="GitHub" href="https://github.com/OuroTorrez" target="_blank"><i
                     class="fa-brands fa-github"></i></a>
             <a data-tooltip="Mail me" href="mailto: mineadriantorrez@gmail.com" target="_blank"><i
@@ -53,7 +50,9 @@
             <a id="SDMobile"><span><span class="FirstLetter">C</span>lick <span class="FirstLetter">H</span>ere</span></a>
         </div>
     </header>
+    <!-- Content -->
     <content id="Content">
+        <!-- Floating Window -->
         <div class="FloatingWindowBackground">
             <div class="FloatingWindow">
                 <div class="FloatingWindowControl">
@@ -66,6 +65,7 @@
                 </div>
             </div>
         </div>
+        <!-- Header Menu -->
         <header id="HeaderMenuContainer">
             <div id="HeaderMenu">
                 <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('projects.html')"
@@ -82,6 +82,7 @@
                 </a>
             </div>
         </header>
+        <!-- Cover slider -->
         <section class="pic-ctn" id="Slider">
             <img src="Images/cat-looking-butterfly.jpg" alt="Cat looking at butterfly" class="pic">
             <img src="Images/little-kitten.jpg" alt="Kitten" class="pic">
@@ -121,10 +122,6 @@
                                 <div id="AboutCardIcons">
                                     <a data-tooltip="LinkedIn" href="https://www.linkedin.com/in/adrian-torrez-beltran/"
                                         target="_blank" class="LinkIcons"><i class="fa-brands fa-linkedin"></i></a>
-                                    <!--
-                                    <a data-tooltip="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                                    <a data-tooltip="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                                    -->
                                     <a data-tooltip="GitHub" href="https://github.com/OuroTorrez" target="_blank"
                                         class="LinkIcons"><i class="fa-brands fa-github"></i></a>
                                     <a data-tooltip="Mail me" href="mailto: mineadriantorrez@gmail.com" target="_blank"
@@ -152,7 +149,7 @@
                     <!-- About description -->
                     <div id="AboutCardTextContainer">
                         <div id="AboutCardText">
-                            <h1><span class="FirstLetter">H</span>ello<span class="FirstLetter">!</span></h1>
+                            <h1 class="TypewriterEffect" style="--Steps: 13"><span class="FirstLetter">H</span>ello<span class="FirstLetter">!</span></h1>
                             <p>I'm Adrian Torrez, fueled by my passion about video games and programming.</p>
                             <p>
                                 I firmly believe that, embracing passion, honesty and persistence is the secret to
@@ -182,6 +179,7 @@
     integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
+    // Header scroll
     $('#ScrollDown').click(function () {
         $('#Header, #Content').addClass('Scrolled');
     });
@@ -204,10 +202,13 @@
         }
     });
 
+
+    //Delayed link
     function delayedLink(URL) {
         setTimeout(function () { window.location = URL }, 510);
     }
 
+    //Floating window
     $('.CloseFloatingWindow').click(function (event) {
         event.stopPropagation();
         $('.FloatingWindowBackground').fadeOut(200);
@@ -228,6 +229,7 @@
         $('.FloatingWindow').toggleClass('FloatingWindowActive');
     });
 
+    //Loading screen
     function AppearLoadingScreen() {
         console.log('Span clicked!');
         $('#LoadingScreen').removeClass('LoadingScreenDisappear'); // Correct class name
@@ -240,5 +242,20 @@
             $('#LoadingScreen').addClass('LoadingScreenDisappear');
         }, 500);
     }
+
+    //Typewriter effect on sight
+    document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('TypewriterEffect');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            const typewriterElement = document.querySelector('.TypewriterEffect');
+            observer.observe(typewriterElement);
+        });
 
 </script>

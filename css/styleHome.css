@@ -433,6 +433,8 @@ img:nth-child(5) {
 #AboutCardText h1 {
     color: var(--Primary);
     text-transform: uppercase;
+    padding: 0;
+    margin: 0;
 }
 
 #AboutCardText p {
@@ -496,5 +498,6 @@ img:nth-child(5) {
         width: 100%;
         height: 100%;
         padding: 0 5px;
+        font-size: 2.1vh;
     }
 }

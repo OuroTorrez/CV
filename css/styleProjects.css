@@ -2,14 +2,20 @@
     --ProjectInfoBGColor: 255, 255, 255;
 }
 
-#ProjectCover {
-    width: 100%;
+.StarCanvas {
+    width: 100vw;
     height: 100vh;
+}
+
+#ProjectCover {
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    position: absolute;
+    top: 60vh;
+    left: 5%;
 }
 
 .Project {
