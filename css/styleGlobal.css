@@ -11,16 +11,15 @@
 }
 
 /* Font control */
-@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Sono', monospace;
+    font-family: "Sono", monospace;
+    font-weight: 500;
 }
 
 span, p, ul, li, i, a{
 	font-family: 'Poppins', sans-serif;
-	font-weight: 400;
+    font-weight: 300;
 }
 
 /* General Page Styles */
@@ -115,8 +114,8 @@ body {
     /* First Letter class */
 .FirstLetter {
     font-size: 120%;
-    font-weight: inherit;
     font-family: inherit;
+    font-weight: inherit;
     color: inherit;
 }
 
@@ -182,10 +181,6 @@ i {
     text-transform: uppercase;
     transition: all .3s;
 }
-
-.ButtonText * {
-    font-weight: bold;
-}
    
 .ButtonIcon {
     -webkit-text-stroke: 1px;
@@ -222,7 +217,6 @@ i {
     transform: translateX(-50%);
     background-color: #222222c0;
     color: var(--Primary);
-    font-weight: bold;
     border: var(--Primary) 2px solid; /*Hola Adrián si te encuentras este mensaje fui yo ñ_ñ besitos y así Ini*/
     border-radius: 5px;
     padding: 3px 10px;
@@ -259,14 +253,13 @@ i {
 }
 
 .HeaderMenuItem {
-    font-weight: bold;
     text-decoration: none;
     color: var(--OnBackground);
     text-transform: uppercase;
     border-bottom: 3px solid transparent;
     padding: 10px 10px 5px 10px;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 1px;
 }
 

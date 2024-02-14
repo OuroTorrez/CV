@@ -18,6 +18,11 @@
     <link rel="icon" type="image/png" href="https://picsum.photos/64/64" sizes="64x64">
     <link rel="icon" type="image/png" href="https://picsum.photos/192/192" sizes="192x192">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google font integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sono:wght,MONO@200..800,0..1&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,6 +33,7 @@
     -->
     <!-- Hero header -->
     <header id="Header">
+        <div id="HeaderAnnouncements"><i class="fa-solid fa-triangle-exclamation"></i><h3>&nbsp;Site under development&nbsp;</h3><i class="fa-solid fa-triangle-exclamation"></i></div>
         <h1 id="Title"><span class="FirstLetter">A</span>drian <span class="FirstLetter">T</span>orrez</h1>
         <h5 id="Subtitle"  class="TypewriterEffect" style="--Steps: 20"><span class="FirstLetter">V</span>ideo<span class="FirstLetter">G</span>ame <span
                 class="FirstLetter">D</span>eveloper</h5>
@@ -196,7 +202,7 @@
     });
     $(window).mousewheel(function (e) {
         if ($('#Header.Scrolled').length) {
-            if ($(window).scrollTop() == 0 && e.deltaY > 40) {
+            if ($(window).scrollTop() == 0 && e.deltaY > 1) {
                 $('#Header, #Content').removeClass('Scrolled');
             }
         }

@@ -5,6 +5,30 @@
     padding: 0;
 }
 
+@keyframes barberpole {
+    100% {
+      background-position: 100% 100%;
+    }
+}
+#HeaderAnnouncements {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100vw;
+    height: 20px;
+    background: repeating-linear-gradient(-45deg, rgba(255, 174, 0, 0.5), rgba(255, 174, 0, 0.5) 1rem,rgba(0, 0, 0, 0.5) 1rem,rgba(0, 0, 0, 0.5) 2rem);
+    background-size: 200% 200%;
+    animation: barberpole 100s linear infinite;
+    z-index: 12;
+    color: var(--Primary);
+    -webkit-text-stroke: #121212 .5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 #Header {
     width: 100vw;
     height: 100vh;
@@ -40,10 +64,6 @@
     color: var(--Primary);
     text-transform: uppercase;
     font-size: 1.5vw;
-}
-
-#Title * , #Subtitle *{
-    font-weight: bold;
 }
 
 #Icons {

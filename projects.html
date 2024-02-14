@@ -2,310 +2,305 @@
 <html>
 
 <head lang="en-es">
-    <meta charset="UTF-8">
-    <title>Projects - Adrian Torrez</title>
-    <meta name="description"
-        content="Collection about Adrian Torrez professional credentials. Video game dev engenieering graduate with knowledge on web development.">
-    <link rel="stylesheet" href="css/styleGlobal.css">
-    <link rel="stylesheet" href="css/styleProjects.css">
+  <meta charset="UTF-8">
+  <title>Projects - Adrian Torrez</title>
+  <meta name="description"
+    content="Collection about Adrian Torrez professional credentials. Video game dev engenieering graduate with knowledge on web development.">
+  <link rel="stylesheet" href="css/styleGlobal.css">
+  <link rel="stylesheet" href="css/styleProjects.css">
 
-    <!-- Font awesome integration -->
-    <script src="https://kit.fontawesome.com/e80de1fade.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap integration -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="icon" type="image/x-icon" href="https://picsum.photos/16/16" sizes="16x16">
-    <link rel="icon" type="image/png" href="https://picsum.photos/32/32" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://picsum.photos/48/48" sizes="48x48">
-    <link rel="icon" type="image/png" href="https://picsum.photos/64/64" sizes="64x64">
-    <link rel="icon" type="image/png" href="https://picsum.photos/192/192" sizes="192x192">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font awesome integration -->
+  <script src="https://kit.fontawesome.com/e80de1fade.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap integration -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="icon" type="image/x-icon" href="https://picsum.photos/16/16" sizes="16x16">
+  <link rel="icon" type="image/png" href="https://picsum.photos/32/32" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://picsum.photos/48/48" sizes="48x48">
+  <link rel="icon" type="image/png" href="https://picsum.photos/64/64" sizes="64x64">
+  <link rel="icon" type="image/png" href="https://picsum.photos/192/192" sizes="192x192">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font integration -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sono:wght,MONO@200..800,0..1&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
-    <!--
+  <!--
 
         <div id="LoadingScreen">
             <img id="LoadingScreenLogo" src="https://picsum.photos/192/192">
         </div>
     -->
-    <!-- Floating window -->
-    <div class="FloatingWindowBackground">
-        <div class="FloatingWindow">
-            <div class="FloatingWindowControl">
-                <h3><span class="FirstLetter">C</span>urrículum <span class="FirstLetter">V</span>itae</h3>
-                <i class="fa-solid fa-xmark CloseFloatingWindow"></i>
-            </div>
-            <div class="FloatingWindowContent">
-                <object data="Media/CV English.pdf" type="application/pdf" class="FloatingWindowPDF"></object>
-                <span>Updated: 09/12/2023</span>
-            </div>
-        </div>
+
+  <!-- Header Menu -->
+  <header id="HeaderMenuContainer">
+    <div id="HeaderMenu">
+      <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('projects.html')"
+        class="delayedLin HeaderMenuItem HeaderMenuItemActive">
+        <span class="FirstLetter">P</span>rojects
+      </a>
+      <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('index.html')" class="delayedLink HeaderMenuItem">
+        <span class="FirstLetter">H</span>ome
+      </a>
+      <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('about.html')" class="delayedLink HeaderMenuItem">
+        <span class="FirstLetter">A</span>bout <span class="FirstLetter">M</span>e
+      </a>
     </div>
-    <!-- Header Menu -->
-    <header id="HeaderMenuContainer">
-        <div id="HeaderMenu">
-            <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('projects.html')"
-                class="delayedLin HeaderMenuItem HeaderMenuItemActive">
-                <span class="FirstLetter">P</span>rojects
-            </a>
-            <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('index.html')"
-                class="delayedLink HeaderMenuItem">
-                <span class="FirstLetter">H</span>ome
-            </a>
-            <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('about.html')"
-                class="delayedLink HeaderMenuItem">
-                <span class="FirstLetter">A</span>bout <span class="FirstLetter">M</span>e
-            </a>
-        </div>
-    </header>
-    <!-- Star background -->
-    <canvas class="StarCanvas"></canvas>
-    
-    <div id="ProjectCover" class="content">
-        <h1 class="TypewriterEffect" style="--Steps: 13">Check a look.</h1>
-        <span>Hi! My name is Adrian Torrez and I'm pursuing a videogame development career</span>
-        <span>currently working as WebMaster</span>
+  </header>
+
+  <!-- Star background -->
+  <canvas class="StarCanvas Project"></canvas>
+  <!-- Cover title -->
+  <div id="ProjectCover" class="content">
+    <h1 class="TypewriterEffect" style="--Steps: 13">Check a look.</h1>
+    <span>Hi! My name is Adrian Torrez and I'm pursuing a videogame development career</span>
+    <span>currently working as WebMaster</span>
+  </div>
+
+  <!-- Project 1 -->
+  <section class="Project" style="background-image: url(Media/Images/PROYECTOPREFECO1920x1080Cover.png)">
+    <div class="ProjectInfo" style="--ProjectInfoBGColor: 255, 2, 102">
+      <h1>PREFECO Archive</h1>
+      <div class="ProjectIcons">
+        <a data-tooltip="HTML" class="PIcons"><i class="fa-brands fa-html5"></i></a>
+        <a data-tooltip="HTML" class="PIcons"><i class="fa-brands fa-css3-alt"></i></a>
+        <a data-tooltip="HTML" class="PIcons"><i class="fa-solid fa-database"></i></a>
+        <a data-tooltip="HTML" class="PIcons"><i class="fa-brands fa-square-js"></i></a>
+      </div>
+      <span class="ProjectDescription">Scholar online file manager</span>
+      <a href="Projects/PREFECO/prefeco.html" class="ProjectLink">View Project</a>
     </div>
+  </section>
 
-    <section class="Project" style="background-image: url(Media/Images/PROYECTO\ PREFECO\ 1920x1080\ Cover\ NoBG.png)">
-        <div class="ProjectInfo" style="--ProjectInfoBGColor: 255, 2, 102">
-            <h1 class="TypewriterEffect">PREFECO Archive</h1>
-            <div class="ProjectIcons">
-                <a data-tooltip="HTML" class="PIcons"><i class="fa-brands fa-html5"></i></a>
-                <a data-tooltip="HTML" class="PIcons"><i class="fa-brands fa-css3-alt"></i></a>
-                <a data-tooltip="HTML" class="PIcons"><i class="fa-solid fa-database"></i></a>
-                <a data-tooltip="HTML" class="PIcons"><i class="fa-brands fa-square-js"></i></a>
-            </div>
-            <span class="ProjectDescription">Scholar online file manager</span>
-            <a href="Projects/PREFECO/prefeco.html" class="ProjectLink">View Project</a>
-        </div>
-    </section>
+  <section class="Project" style="background-image: url(https://picsum.photos/1920/1080?);">
+    <div class="ProjectInfo">
+      <h2>Second Project</h2>
+    </div>
+  </section>
 
-    <section class="Project" style="background-image: url(https://picsum.photos/1920/1080?);">
-        <div class="ProjectInfo">
-            <h2>Second Project</h2>
-        </div>
-    </section>
+  <section class="Project" style="background-image: url(https://picsum.photos/1920/1080?grayscale);">
+    <div class="ProjectInfo">
+      <h2>Third Project</h2>
+    </div>
+  </section>
 
-    <section class="Project" style="background-image: url(https://picsum.photos/1920/1080?grayscale);">
-        <div class="ProjectInfo">
-            <h2>Third Project</h2>
-        </div>
-    </section>
-
-    <section class="Project" style="background-image: url(https://picsum.photos/1920/1080?);">
-        <div class="ProjectInfo">
-            <h2>Fourth Project</h2>
-        </div>
-    </section>
+  <section class="Project" style="background-image: url(https://picsum.photos/1920/1080?);">
+    <div class="ProjectInfo">
+      <h2>Fourth Project</h2>
+    </div>
+  </section>
 </body>
 
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
-    integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-    function delayedLink(URL) {
-        setTimeout(function () { window.location = URL }, 510);
-    }
-
-    $('.CloseFloatingWindow').click(function (event) {
-        event.stopPropagation();
-        $('.FloatingWindowBackground').fadeOut(200);
-        $('.FloatingWindow').toggleClass('FloatingWindowActive');
-    });
-
-    $('.FloatingWindowBackground').click(function () {
-        $('.FloatingWindowBackground').fadeOut(200);
-        $('.FloatingWindow').toggleClass('FloatingWindowActive');
-    });
-
-    $('.FloatingWindow').click(function (event) {
-        event.stopPropagation(); //
-    });
-
-    $('.DownloadCV').click(function () {
-        $('.FloatingWindowBackground').fadeIn(200);
-        $('.FloatingWindow').toggleClass('FloatingWindowActive');
-    });
-
-    function AppearLoadingScreen() {
-        console.log('Span clicked!');
-        $('#LoadingScreen').removeClass('LoadingScreenDisappear'); // Correct class name
-        $('#LoadingScreen').addClass('LoadingScreenAppear');
-    }
-
-    window.onload = function () {
-        setTimeout(function () {
-            $('#LoadingScreen').removeClass('LoadingScreenAppear');
-            $('#LoadingScreen').addClass('LoadingScreenDisappear');
-        }, 500);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('TypewriterEffect');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-
-            const typewriterElement = document.querySelector('.TypewriterEffect');
-            observer.observe(typewriterElement);
-        });
-
-    // Star background Copyright (c) 2024 by Azam Sid (https://codepen.io/azamsiddiqui/pen/MLOozz)
-    const STAR_COUNT = (window.innerWidth + window.innerHeight) / 5,
-  STAR_SIZE = 2,
-  STAR_MIN_SCALE = 0.2,
-  OVERFLOW_THRESHOLD = 50;
-const canvas = document.querySelector('.StarCanvas'),
-  context = canvas.getContext('2d');
-let scale = 1,
-  // device pixel ratio
-  width,
-  height;
-let stars = [];
-let pointerX, pointerY;
-let velocity = {
-  x: 0,
-  y: 0,
-  tx: 0,
-  ty: 0,
-  z: 0.005
-};
-let touchInput = false;
-generate();
-resize();
-step();
-window.onresize = resize;
-canvas.onmousemove = onMouseMove;
-canvas.ontouchmove = onTouchMove;
-canvas.ontouchend = onMouseLeave;
-document.onmouseleave = onMouseLeave;
-function generate() {
-  for (let i = 0; i < STAR_COUNT; i++) {
-    stars.push({
-      x: 0,
-      y: 0,
-      z: STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE)
-    });
+  function delayedLink(URL) {
+    setTimeout(function () { window.location = URL }, 510);
   }
-}
-function placeStar(star) {
-  star.x = Math.random() * width;
-  star.y = Math.random() * height;
-}
-function recycleStar(star) {
-  let direction = 'z';
-  let vx = Math.abs(velocity.tx),
-    vy = Math.abs(velocity.ty);
-  if (vx > 1 && vy > 1) {
-    let axis;
-    if (vx > vy) {
-      axis = Math.random() < Math.abs(velocity.x) / (vx + vy) ? 'h' : 'v';
-    } else {
-      axis = Math.random() < Math.abs(velocity.y) / (vx + vy) ? 'v' : 'h';
-    }
-    if (axis === 'h') {
-      direction = velocity.x > 0 ? 'l' : 'r';
-    } else {
-      direction = velocity.y > 0 ? 't' : 'b';
+
+  $('.CloseFloatingWindow').click(function (event) {
+    event.stopPropagation();
+    $('.FloatingWindowBackground').fadeOut(200);
+    $('.FloatingWindow').toggleClass('FloatingWindowActive');
+  });
+
+  $('.FloatingWindowBackground').click(function () {
+    $('.FloatingWindowBackground').fadeOut(200);
+    $('.FloatingWindow').toggleClass('FloatingWindowActive');
+  });
+
+  $('.FloatingWindow').click(function (event) {
+    event.stopPropagation(); //
+  });
+
+  $('.DownloadCV').click(function () {
+    $('.FloatingWindowBackground').fadeIn(200);
+    $('.FloatingWindow').toggleClass('FloatingWindowActive');
+  });
+
+  function AppearLoadingScreen() {
+    console.log('Span clicked!');
+    $('#LoadingScreen').removeClass('LoadingScreenDisappear'); // Correct class name
+    $('#LoadingScreen').addClass('LoadingScreenAppear');
+  }
+
+  window.onload = function () {
+    setTimeout(function () {
+      $('#LoadingScreen').removeClass('LoadingScreenAppear');
+      $('#LoadingScreen').addClass('LoadingScreenDisappear');
+    }, 500);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('TypewriterEffect');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    const typewriterElement = document.querySelector('.TypewriterEffect');
+    observer.observe(typewriterElement);
+  });
+
+  // Star background Copyright (c) 2024 by Azam Sid (https://codepen.io/azamsiddiqui/pen/MLOozz)
+  const STAR_COUNT = (window.innerWidth + window.innerHeight) / 5,
+    STAR_SIZE = 2,
+    STAR_MIN_SCALE = 0.2,
+    OVERFLOW_THRESHOLD = 50;
+  const canvas = document.querySelector('.StarCanvas'),
+    context = canvas.getContext('2d');
+  let scale = 1,
+    // device pixel ratio
+    width,
+    height;
+  let stars = [];
+  let pointerX, pointerY;
+  let velocity = {
+    x: 0,
+    y: 0,
+    tx: 0,
+    ty: 0,
+    z: 0.005
+  };
+  let touchInput = false;
+  generate();
+  resize();
+  step();
+  window.onresize = resize;
+  canvas.onmousemove = onMouseMove;
+  canvas.ontouchmove = onTouchMove;
+  canvas.ontouchend = onMouseLeave;
+  document.onmouseleave = onMouseLeave;
+  function generate() {
+    for (let i = 0; i < STAR_COUNT; i++) {
+      stars.push({
+        x: 0,
+        y: 0,
+        z: STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE)
+      });
     }
   }
-  star.z = STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE);
-  if (direction === 'z') {
-    star.z = 0.1;
+  function placeStar(star) {
     star.x = Math.random() * width;
     star.y = Math.random() * height;
-  } else if (direction === 'l') {
-    star.x = -STAR_SIZE;
-    star.y = height * Math.random();
-  } else if (direction === 'r') {
-    star.x = width + STAR_SIZE;
-    star.y = height * Math.random();
-  } else if (direction === 't') {
-    star.x = width * Math.random();
-    star.y = -STAR_SIZE;
-  } else if (direction === 'b') {
-    star.x = width * Math.random();
-    star.y = height + STAR_SIZE;
   }
-}
-function resize() {
-  scale = window.devicePixelRatio || 1;
-  width = window.innerWidth * scale;
-  height = window.innerHeight * scale;
-  canvas.width = width;
-  canvas.height = height;
-  stars.forEach(placeStar);
-}
-function step() {
-  context.clearRect(0, 0, width, height);
-  update();
-  render();
-  requestAnimationFrame(step);
-}
-function update() {
-  velocity.tx *= 0.95;
-  velocity.ty *= 0.95;
-  velocity.x += (velocity.tx - velocity.x) * 0.3;
-  velocity.y += (velocity.ty - velocity.y) * 0.3;
-  stars.forEach(star => {
-    star.x += velocity.x * star.z;
-    star.y += velocity.y * star.z;
-    star.x += (star.x - width / 2) * velocity.z * star.z;
-    star.y += (star.y - height / 2) * velocity.z * star.z;
-    star.z += velocity.z;
-
-    // recycle when out of bounds
-    if (star.x < -OVERFLOW_THRESHOLD || star.x > width + OVERFLOW_THRESHOLD || star.y < -OVERFLOW_THRESHOLD || star.y > height + OVERFLOW_THRESHOLD) {
-      recycleStar(star);
+  function recycleStar(star) {
+    let direction = 'z';
+    let vx = Math.abs(velocity.tx),
+      vy = Math.abs(velocity.ty);
+    if (vx > 1 && vy > 1) {
+      let axis;
+      if (vx > vy) {
+        axis = Math.random() < Math.abs(velocity.x) / (vx + vy) ? 'h' : 'v';
+      } else {
+        axis = Math.random() < Math.abs(velocity.y) / (vx + vy) ? 'v' : 'h';
+      }
+      if (axis === 'h') {
+        direction = velocity.x > 0 ? 'l' : 'r';
+      } else {
+        direction = velocity.y > 0 ? 't' : 'b';
+      }
     }
-  });
-}
-function render() {
-  stars.forEach(star => {
-    context.beginPath();
-    context.lineCap = 'round';
-    context.lineWidth = STAR_SIZE * star.z * scale;
-    context.strokeStyle = 'rgba(255, 2, 102, 1)' + (0.5 + 0.5 * Math.random()) + ')';
-    context.beginPath();
-    context.moveTo(star.x, star.y);
-    var tailX = velocity.x * 2,
-      tailY = velocity.y * 2;
-
-    // stroke() wont work on an invisible line
-    if (Math.abs(tailX) < 0.1) tailX = 0.5;
-    if (Math.abs(tailY) < 0.1) tailY = 0.5;
-    context.lineTo(star.x + tailX, star.y + tailY);
-    context.stroke();
-  });
-}
-function movePointer(x, y) {
-  if (typeof pointerX === 'number' && typeof pointerY === 'number') {
-    let ox = x - pointerX,
-      oy = y - pointerY;
-    velocity.tx = velocity.x + ox / 8 * scale * (touchInput ? -1 : 1);
-    velocity.ty = velocity.y + oy / 8 * scale * (touchInput ? -1 : 1);
+    star.z = STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE);
+    if (direction === 'z') {
+      star.z = 0.1;
+      star.x = Math.random() * width;
+      star.y = Math.random() * height;
+    } else if (direction === 'l') {
+      star.x = -STAR_SIZE;
+      star.y = height * Math.random();
+    } else if (direction === 'r') {
+      star.x = width + STAR_SIZE;
+      star.y = height * Math.random();
+    } else if (direction === 't') {
+      star.x = width * Math.random();
+      star.y = -STAR_SIZE;
+    } else if (direction === 'b') {
+      star.x = width * Math.random();
+      star.y = height + STAR_SIZE;
+    }
   }
-  pointerX = x;
-  pointerY = y;
-}
-function onMouseMove(event) {
-  touchInput = false;
-  movePointer(event.clientX, event.clientY);
-}
-function onTouchMove(event) {
-  touchInput = true;
-  movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
-  event.preventDefault();
-}
-function onMouseLeave() {
-  pointerX = null;
-  pointerY = null;
-}
+  function resize() {
+    scale = window.devicePixelRatio || 1;
+    width = window.innerWidth * scale;
+    height = window.innerHeight * scale;
+    canvas.width = width;
+    canvas.height = height;
+    stars.forEach(placeStar);
+  }
+  function step() {
+    context.clearRect(0, 0, width, height);
+    update();
+    render();
+    requestAnimationFrame(step);
+  }
+  function update() {
+    velocity.tx *= 0.95;
+    velocity.ty *= 0.95;
+    velocity.x += (velocity.tx - velocity.x) * 0.3;
+    velocity.y += (velocity.ty - velocity.y) * 0.3;
+    stars.forEach(star => {
+      star.x += velocity.x * star.z;
+      star.y += velocity.y * star.z;
+      star.x += (star.x - width / 2) * velocity.z * star.z;
+      star.y += (star.y - height / 2) * velocity.z * star.z;
+      star.z += velocity.z;
+
+      // recycle when out of bounds
+      if (star.x < -OVERFLOW_THRESHOLD || star.x > width + OVERFLOW_THRESHOLD || star.y < -OVERFLOW_THRESHOLD || star.y > height + OVERFLOW_THRESHOLD) {
+        recycleStar(star);
+      }
+    });
+  }
+  function render() {
+    stars.forEach(star => {
+      context.beginPath();
+      context.lineCap = 'round';
+      context.lineWidth = STAR_SIZE * star.z * scale;
+      context.strokeStyle = 'rgba(255, 2, 102, 1)' + (0.5 + 0.5 * Math.random()) + ')';
+      context.beginPath();
+      context.moveTo(star.x, star.y);
+      var tailX = velocity.x * 2,
+        tailY = velocity.y * 2;
+
+      // stroke() wont work on an invisible line
+      if (Math.abs(tailX) < 0.1) tailX = 0.5;
+      if (Math.abs(tailY) < 0.1) tailY = 0.5;
+      context.lineTo(star.x + tailX, star.y + tailY);
+      context.stroke();
+    });
+  }
+  function movePointer(x, y) {
+    if (typeof pointerX === 'number' && typeof pointerY === 'number') {
+      let ox = x - pointerX,
+        oy = y - pointerY;
+      velocity.tx = velocity.x + ox / 8 * scale * (touchInput ? -1 : 1);
+      velocity.ty = velocity.y + oy / 8 * scale * (touchInput ? -1 : 1);
+    }
+    pointerX = x;
+    pointerY = y;
+  }
+  function onMouseMove(event) {
+    touchInput = false;
+    movePointer(event.clientX, event.clientY);
+  }
+  function onTouchMove(event) {
+    touchInput = true;
+    movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
+    event.preventDefault();
+  }
+  function onMouseLeave() {
+    pointerX = null;
+    pointerY = null;
+  }
+
 </script>
