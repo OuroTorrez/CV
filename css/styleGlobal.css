@@ -217,7 +217,7 @@ i {
     transform: translateX(-50%);
     background-color: #222222c0;
     color: var(--Primary);
-    border: var(--Primary) 2px solid; /*Hola Adrián si te encuentras este mensaje fui yo ñ_ñ besitos y así Ini*/
+    border: var(--Primary) 2px solid;
     border-radius: 5px;
     padding: 3px 10px;
     font-size: 1.1vw;

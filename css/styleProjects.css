@@ -40,7 +40,7 @@ body, html {
 
 .ProjectInfo {
     background-color: rgba(var(--ProjectInfoBGColor), 0.7);
-    padding-top: 13%;
+    padding-top: 10%;
     padding-left: 10%;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@ body, html {
 }
 
 .ProjectDescription {
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .ProjectLink {
