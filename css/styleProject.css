@@ -2,3 +2,135 @@
     width: 100vw;
     height: 100vh;
 }
+
+#ProjectTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    color: var(--OnBackground);
+}
+
+#ProjectTitle h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 550%;
+    color: var(--Primary);
+}
+
+#ProjectInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20%;
+    height: 60vh;
+}
+
+#ProjectInfo #ProjectDetails {
+    flex: 1;
+    color: var(--OnBackground);
+}
+
+#ProjectInfo #ProjectOverview {
+    flex: 2;
+    color: var(--OnBackground);
+}
+
+#ProjectDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.ProjectDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.ProjectDetail h3 {
+    text-transform: uppercase;
+}
+
+.ProjectDetail * {
+    margin: 0;
+}
+
+.ProjectDetail ul {
+    padding-left: 0;
+}
+
+.ProjectDetail ul li::marker {
+    content: '>  ';
+    color: var(--Primary);
+    font-weight: bold;
+}
+
+.ProjectDetailBorder {
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid var(--Primary);
+    position: relative;
+    left: 15px;
+    width: 50px;
+}
+
+.ProjectOverview {
+    width: 50%;
+}
+
+#ProjectCollage ul {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#ProjectCollage ul li {
+    height: 60vh;
+    flex-grow: 1;
+}
+
+#ProjectCollage ul li img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    #ProjectCollage ul li {
+        height: 80vh;
+    }
+}
+
+
+@media (max-height: 480px) {
+    #ProjectCollage ul li {
+        height: 80vh;
+    }
+}
+
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    #ProjectCollage ul {
+        flex-direction: row;
+    }
+
+    #ProjectCollage ul li {
+        height: auto;
+        width: 100%;
+    }
+
+    #ProjectCollage ul li img {
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+    }
+}

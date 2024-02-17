@@ -24,26 +24,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sono:wght,MONO@200..800,0..1&display=swap" rel="stylesheet">
 </head>
+<!-- Header Menu -->
+<header id="HeaderMenuContainer">
+    <div id="HeaderMenu">
+        <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('../projects.html')"
+            class="delayedLink HeaderMenuItem HeaderMenuItemActive">
+            <span class="FirstLetter">P</span>rojects
+        </a>
+        <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('../index.html')"
+            class="delayedLink HeaderMenuItem">
+            <span class="FirstLetter">H</span>ome
+        </a>
+        <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('../about.html')"
+            class="delayedLink HeaderMenuItem">
+            <span class="FirstLetter">A</span>bout <span class="FirstLetter">M</span>e
+        </a>
+    </div>
+</header>
 <body>
-    <!-- Header Menu -->
-    <header id="HeaderMenuContainer">
-        <div id="HeaderMenu">
-            <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('../projects.html')"
-                class="delayedLink HeaderMenuItem HeaderMenuItemActive">
-                <span class="FirstLetter">P</span>rojects
-            </a>
-            <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('../index.html')"
-                class="delayedLink HeaderMenuItem">
-                <span class="FirstLetter">H</span>ome
-            </a>
-            <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('../about.html')"
-                class="delayedLink HeaderMenuItem">
-                <span class="FirstLetter">A</span>bout <span class="FirstLetter">M</span>e
-            </a>
-        </div>
-    </header>
-    <div id="ProjectCover">
+    <div id="ProjectTitle">
+        <span>2022</span>
         <h1>PREFECO Archive</h1>
+    </div>
+    <div id="ProjectInfo">
+        <div id="ProjectDetails">
+            <div class="ProjectDetail">
+                <h3><span class="FirstLetter">D</span>ate</h3>
+                <div class="ProjectDetailBorder"></div>
+                <p>January - July 2022 (6 months)</p>
+            </div>
+            <div class="ProjectDetail">
+                <h3><span class="FirstLetter">T</span>eam</h3>
+                <div class="ProjectDetailBorder"></div>
+                <ul>
+                    <li>Maximiliano Belmonte</li>
+                    <li>Alberto Virrueta</li>
+                </ul>
+            </div>
+            <div class="ProjectDetail">
+                <h3><span class="FirstLetter">R</span>ole</h3>
+                <div class="ProjectDetailBorder"></div>
+                <p>January - July 2024 (6 months)</p>
+            </div>
+        </div>
+        <div id="ProjectOverview">
+            <p>While paper files are convenient on their own, managing thousands of them within an institution poses challenges in terms of review, maintenance, storage, and retrieval. During a six-month internship with the psychopedagogical department of PREFECO High School, we were tasked with addressing these issues by developing a multifunctional website.</p>
+            <p>The idea was to develop a website where students could upload and access their files, receive updates on their appointments, read news, and stay in touch with their counselors. On the other hand, counselors could manage all aspects of student files, post news, recommend materials, analyze, and provide feedback to each student.</p>
+            <p>The project was completed within the given timeframe. Unfortunately, due to internal decisions and management, it was not published, despite meeting the expectations of the department responsible for the project.</p>
+        </div>
+    </div>
+    <div id="ProjectCollage">
+        <ul>
+            <li>
+                <img src="../Media/Images/PREFECO-EXPEDIENTE.jpeg">
+            </li>
+            <li>
+                <img src="../Media/Images/logoprefecone.png">
+            </li>
+            <li>
+                <img src="../Media/Images/PREFECO-BUSCADOR.jpg">
+            </li>
+            <li>
+                <img src="../Media/Images/PREFECO-INICIO.jpeg">
+            </li>
+            <li>
+                <img src="../Media/Images/alumnosbg.jpeg">
+            </li>
+        </ul>
     </div>
 </body>
 </html>
