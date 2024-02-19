@@ -174,10 +174,12 @@ i {
     background-color: var(--Primary);
     border: none;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+    color: var(--OnBackground);
+    font-size: 110%;
 }
    
 .ButtonIcon, .ButtonText {
-    padding: 10px 15px;
+    padding: 5px 10px;
     text-transform: uppercase;
     transition: all .3s;
 }
@@ -189,6 +191,14 @@ i {
     background-color: var(--Secondary);
     transform: translate(0%,100%);
     border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ButtonIcon i {
+    text-shadow: none;
+    font-size: 110%;
 }
    
 .PrimaryButton:hover .ButtonText {

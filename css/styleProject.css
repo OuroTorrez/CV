@@ -134,3 +134,29 @@
         min-width: 0;
     }
 }
+
+#ProjectMore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 100px 0;
+}
+
+#ProjectMore h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 300%;
+    color: var(--Primary);
+    text-transform: uppercase;
+}
+
+#ProjectMore h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#ProjectMore .PrimaryButton {
+    margin: 50px;
+}
