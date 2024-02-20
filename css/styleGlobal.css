@@ -7,7 +7,7 @@
     --Secondary: #ff7597;
     --Option: #222222;
     --OnColor: #121212;
-    --OnBackground: #F8F8FF;
+    --OnBackground: #f8f8ff;
 }
 
 /* Font control */
@@ -409,4 +409,46 @@ i {
         height: 130vw;
         padding: 0;
     }
+}
+
+/* Footer styles */
+#Separation {
+    margin: auto;
+    width: 80vw;
+    height: 0;
+    border: rgba(255, 2, 102, 0.3) 1px solid;
+    border-radius: 5px;
+}
+
+#Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    color: rgba(248, 248, 255,.65);
+    font-size: 70%;
+    text-transform: uppercase;
+}
+
+#FooterMe a{
+    text-decoration: none;
+    color: rgba(248, 248, 255,.65);
+}
+
+#FooterIcons {
+    text-transform: none;
+    font-size: 145%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding-right: 20px;
+}
+
+#FooterIcons i {
+    color: rgba(248, 248, 255,.65);
+}
+
+#FooterIcons i:hover {
+    color: var(--Primary);
 }

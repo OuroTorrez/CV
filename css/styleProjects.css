@@ -24,6 +24,7 @@ body, html {
     position: absolute;
     top: 60vh;
     left: 5%;
+    pointer-events: none;
 }
 
 .Project {
@@ -48,12 +49,12 @@ body, html {
     align-items: flex-start;
     width: 45%;
     height: 100%;
-    transition: all .5s;
+    transition: all .2s;
 }
 
 .ProjectInfo:hover {
-    background-color: rgba(var(--ProjectInfoBGColor), 0.8);
-    transition: all .5s;
+    background-color: rgba(var(--ProjectInfoBGColor), 0.9);
+    transition: all .2s;
 }
 
 .ProjectInfo h1 {
@@ -75,5 +76,12 @@ body, html {
 }
 
 .ProjectLink {
+    text-decoration: none;
     color: white;
+    border-bottom: 2px solid rgba(248, 248, 255,.45);
+    transition: all .2s;
+}
+
+.ProjectLink:hover {
+    border-bottom: 2px solid rgba(248, 248, 255,1);
 }
