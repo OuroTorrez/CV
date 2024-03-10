@@ -31,7 +31,7 @@
 
 #Header {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     margin: 0;
     padding: 0;
     background-image: url(../Images/ChillingCat.jpg);
@@ -89,21 +89,6 @@
 #Icons a:hover {
     color: var(--Primary);
     transition: all .2s ease;
-}
-
-@media only screen and (max-width: 767px) {
-    /* phones */
-    #Title {
-        font-size: 10vw;
-    }
-
-    #Subtitle {
-        font-size: 4vw;
-    }
-
-    #Icons {
-        font-size: 8vw;
-    }
 }
 
 #ScrollDown {
@@ -175,10 +160,10 @@
 
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     /* phones */
     #ScrollDown {
-        font-size: 6vw;
+        font-size: 4vw;
     }
 
     #SD {
@@ -285,7 +270,7 @@ img:nth-child(5) {
     background-color: var(--Surface);
     width: 850px;
     height: 450px;
-    transition: all .6s ease;
+    transition: all .3s ease;
 }
 
 #AboutCard:hover #AboutCardHoverIcon {
@@ -297,12 +282,12 @@ img:nth-child(5) {
 
     #AboutCard:hover #AboutCardInfoContainer {
         width: 100%;
-        transition: all .6s ease;
+        transition: all .3s ease;
     }
 
     #AboutCard:hover #AboutCardTextContainer {
         width: 0%;
-        transition: all .6s ease;
+        transition: all .3s ease;
     }
 }
 
@@ -464,7 +449,7 @@ img:nth-child(5) {
     resize: none;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
 
     #AboutCardImageMobile {
         display: block;
@@ -475,24 +460,16 @@ img:nth-child(5) {
     }
 
     #AboutCard {
-        position: relative;
-        z-index: 1;
-        padding: 20px;
-        border-radius: 5px;
-        background-color: var(--Surface);
-        width: 500px;
-        height: 550px;
-        transition: all .6s ease;
+        width: 85dvw;
+        height: 70dvh;
     }
     
     #AboutCard:hover #AboutCardInfoContainer {
         height: 100%;
-        transition: all .6s ease;
     }
     
     #AboutCard:hover #AboutCardTextContainer {
         height: 0%;
-        transition: all .6s ease;
     }
     
     #About {
@@ -520,4 +497,12 @@ img:nth-child(5) {
         padding: 0 5px;
         font-size: 2.1vh;
     }
+}
+
+@media screen and (max-width: 767px) {
+    /* phones */
+    #AboutCardText {
+        font-size: 90%;
+    }
+    
 }

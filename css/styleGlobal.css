@@ -25,7 +25,7 @@ span, p, ul, li, i, a{
 /* General Page Styles */
 * {
     box-sizing: border-box;
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
 }
 
 html {
