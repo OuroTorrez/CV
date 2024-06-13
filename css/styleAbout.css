@@ -1,0 +1,334 @@
+#AboutHeader {
+    background-color: var(--Surface);
+    height: 80vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 5%;
+    color: var(--OnBackground);
+}
+
+.AboutSections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5% 25%;
+    color: var(--OnBackground);
+    text-align: justify;
+}
+
+.AboutSections > h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 300%;
+    text-transform: uppercase;
+    color: var(--Primary);
+}
+
+
+/* Seccion de experiencias */
+#Experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90vw;
+    padding: 20px 0px 80px 0px;
+}
+
+.Exp {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 100%;
+}
+
+.ExpTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.ExpContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    left: 20px;
+    border-left: 5px solid #2f2f2f;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.ExpPointContainer {
+    position: relative;
+    top: 20px;
+    left: -20px;
+    z-index: 1;
+}
+
+.ExpPoint {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--Background);
+    border: 3px solid #2f2f2f;
+    z-index: 1;
+}
+
+.ExpPoint::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--Primary);
+    opacity: 0;
+    z-index: -1;
+}
+
+.ExpPoint.Anim::after {
+    animation: Breathe 2s infinite;
+}
+
+@keyframes Breathe {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    25%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(3);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.ExpHeader {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.ExpHeader .ExpJob {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+}
+
+.ExpHeader .ExpTime {
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    color: var(--Primary);
+}
+
+.ExpInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.ExpInfo .ExpInfoDetails {
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.ExpInfo .ExpInfoDetails.Open {
+    max-height: 500px;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.Expand {
+    cursor: pointer;
+    color: var(--Primary);
+    pointer-events: all;
+    position: relative;
+    left: 40%;
+    font-size: 15px;
+    -webkit-text-stroke: 1px;
+}
+
+.ExpInfo i:nth-child(2n) {
+    position: relative;
+    top: -15px;
+    font-size: 15px;
+    animation-delay: -.1s;
+}
+
+.Expand.ExpAnim {
+    animation: SDIconsAnim 1s infinite;
+}
+
+@keyframes Expand {
+    0% {
+        top: calc(100% + 15px)
+    }
+
+    50% {
+        top: calc(100% + 0px)
+    }
+
+    100% {
+        top: calc(100% + 15px)
+    }
+}
+
+@keyframes SDIconsAnim {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Wave animations */
+
+.wave {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1000% 1000% 0 0;
+    width: 200%;
+    height: 9em;
+    position: absolute;
+    animation: wave 10s -3s cubic-bezier(0.42, 0.0, 0.58, 1.0) infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    top: 65vh;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s cubic-bezier(0.42, 0.0, 0.58, 1.0) reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s cubic-bezier(0.42, 0.0, 0.58, 1.0) reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+/* Animacion lines */
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80vh;
+    margin: auto;
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Línea individual */
+.line {
+    position: relative;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--Secondary) 75%, var(--Primary) 100%);
+    animation: drop 7s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+/* Genera un retraso en la animación para cada línea */
+.line:nth-child(odd)::after {
+    animation-delay: 2s;
+}
+
+.line:nth-child(even)::after {
+    animation-delay: 3.5s;
+}
+
+.line:nth-child(3)::after {
+    animation-delay: 4.5s;
+}
+
+.line:nth-child(2)::after {
+    animation-delay: 5.5s;
+}
+
+@keyframes drop {
+    0% {
+        top: -50%;
+    }
+    100% {
+        top: 110%;
+    }
+}

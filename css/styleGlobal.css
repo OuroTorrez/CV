@@ -19,7 +19,8 @@ h1, h2, h3, h4, h5, h6 {
 
 span, p, ul, li, i, a{
 	font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 1.3px;
 }
 
 /* General Page Styles */

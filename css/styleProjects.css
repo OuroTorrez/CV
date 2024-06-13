@@ -16,7 +16,7 @@ body, html {
 }
 
 #ProjectCover {
-    color: white;
+    color: var(--OnBackground);
     display: flex;
     flex-direction: column;
     justify-content: center;
