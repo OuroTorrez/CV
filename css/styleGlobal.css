@@ -40,8 +40,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     background-color: var(--Background);
     overflow-x: hidden;
 }
@@ -51,8 +51,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     background-color: var(--Background);
     z-index: 10;
     overflow: hidden;
@@ -77,8 +77,8 @@ body {
     }
 
     100% {
-        width: 100vw;
-        height: 100vh;
+        width: 100dvw;
+        height: 100dvh;
         border-bottom-right-radius: 0;
     }
 }
@@ -91,8 +91,8 @@ body {
 
 @keyframes LoadingScreenDisappear {
     0% {
-        width: 100vw;
-        height: 100vh;
+        width: 100dvw;
+        height: 100dvh;
         border-bottom-right-radius: 0;
     }
 
@@ -231,7 +231,7 @@ i {
     border: var(--Primary) 2px solid;
     border-radius: 5px;
     padding: 3px 10px;
-    font-size: 1.1vw;
+    font-size: 1.1dvw;
     opacity: 0;
     visibility: hidden;
     transition: all .2s ease-out;
@@ -252,12 +252,12 @@ i {
 }
 
 #HeaderMenu {
-    width: 100vw;
+    width: 100dvw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    gap: 3vw;
+    gap: 3dvw;
     position: sticky;
     top: 0;
     z-index: 6;
@@ -317,8 +317,8 @@ i {
 
 .FloatingWindowBackground {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     background-color: #00000080;
     z-index: 7;
     display: none;
@@ -333,8 +333,8 @@ i {
     top: -50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 0vw;
-    height: 0vh;
+    width: 0dvw;
+    height: 0dvh;
     z-index: 8;
     transition: all .3s;
 }
@@ -342,8 +342,8 @@ i {
 .FloatingWindowActive {
     top: 50%;
     left: 50%;
-    width: 70vw;
-    height: 85vh;
+    width: 70dvw;
+    height: 85dvh;
     transform: translate(-50%, -50%);
     transition: all .3s;
 }
@@ -406,8 +406,8 @@ i {
 @media only screen and (max-width: 1025px) {
     /* phones */
     .FloatingWindow {
-        width: 100vw;
-        height: 130vw;
+        width: 100dvw;
+        height: 130dvw;
         padding: 0;
     }
 }
@@ -415,7 +415,7 @@ i {
 /* Footer styles */
 #Separation {
     margin: auto;
-    width: 80vw;
+    width: 80dvw;
     height: 0;
     border: rgba(255, 2, 102, 0.3) 1px solid;
     border-radius: 5px;

@@ -11,8 +11,8 @@ body, html {
 }
 
 .StarCanvas {
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
 }
 
 #ProjectCover {
@@ -22,14 +22,14 @@ body, html {
     justify-content: center;
     align-items: flex-start;
     position: absolute;
-    top: 60vh;
+    top: 60dvh;
     left: 5%;
     pointer-events: none;
 }
 
 .Project {
     position: relative;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     background-attachment: fixed;
     background-size: cover;
@@ -95,7 +95,7 @@ body, html {
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 40dvh;
+        height: 40ddvh;
         padding: 10% 5%;
     }
 }

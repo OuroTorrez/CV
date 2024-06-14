@@ -30,7 +30,7 @@
 }
 
 #Header {
-    width: 100vw;
+    width: 100dvw;
     height: 100dvh;
     margin: 0;
     padding: 0;
@@ -57,19 +57,19 @@
 #Title {
     color: var(--OnBackground);
     text-transform: uppercase;
-    font-size: 6vw;
+    font-size: 6dvw;
 }
 
 #Subtitle {
     color: var(--Primary);
     text-transform: uppercase;
-    font-size: 1.5vw;
+    font-size: 1.5dvw;
 }
 
 #Icons {
     width: 100%;
     margin-top: 2%;
-    font-size: 3vw;
+    font-size: 3dvw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -100,7 +100,7 @@
     position: absolute;
     bottom: 10px;
     color: var(--OnBackground);
-    font-size: 1.6vw;
+    font-size: 1.6dvw;
 }
 
 #SDIcons {
@@ -163,7 +163,7 @@
 @media only screen and (max-width: 768px) {
     /* phones */
     #ScrollDown {
-        font-size: 4vw;
+        font-size: 4dvw;
     }
 
     #SD {
@@ -220,7 +220,7 @@
 	position: relative;
     top: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100dvh;
 	overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -235,9 +235,9 @@
 	opacity: 0;
 	animation: display 10s infinite;
 	min-width: 100%;
-    max-width: 100vh;
+    max-width: 100dvh;
     min-height: 100%;
-    max-height: 100vh;
+    max-height: 100dvh;
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -460,8 +460,8 @@ img:nth-child(5) {
     }
 
     #AboutCard {
-        width: 85dvw;
-        height: 70dvh;
+        width: 85ddvw;
+        height: 70ddvh;
     }
     
     #AboutCard:hover #AboutCardInfoContainer {
@@ -495,7 +495,7 @@ img:nth-child(5) {
         width: 100%;
         height: 100%;
         padding: 0 5px;
-        font-size: 2.1vh;
+        font-size: 2.1dvh;
     }
 }
 
