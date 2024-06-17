@@ -74,7 +74,7 @@
         <span>Let's get in touch!</span>
     </div>
 
-    <div id="AboutWho" class="AboutSections">
+    <div id="AboutWho" class="AboutSections Close">
         <h1><span class="FirstLetter">W</span>ho Am I<span class="FirstLetter">?</span></h1>
         <p>
             &emsp;I'm just a guy that loves tech and videogames,
@@ -94,7 +94,7 @@
             I enjoy and tresure every adventure and experience that makes me or my beloved ones happy.
         </p>
     </div>
-    <div id="AboutSkills" class="AboutSections">
+    <div id="AboutSkills" class="AboutSections Open">
         <h1><span class="FirstLetter">W</span>hat I do<span class="FirstLetter">?</span></h1>
         <p>
             &emsp;I'm a video game development engineering graduate who's passionate and loves creating new things and diving into new technologies.
@@ -513,5 +513,10 @@
         }
     );
 
+    // About sections
+    $(".AboutSections").click(function () {
+        $(this).toggleClass("Open");
+        $(this).toggleClass("Close");
+    });
 
 </script>

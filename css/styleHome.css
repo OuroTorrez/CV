@@ -24,7 +24,7 @@
     animation: barberpole 100s linear infinite;
     z-index: 12;
     color: var(--Primary);
-    -webkit-text-stroke: #121212 .5px;
+    -webkit-text-stroke: .5px #121212;
     text-transform: uppercase;
     font-weight: 600;
 }
