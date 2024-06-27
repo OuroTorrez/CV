@@ -406,9 +406,16 @@ i {
 @media only screen and (max-width: 1025px) {
     /* phones */
     .FloatingWindow {
-        width: 100dvw;
-        height: 130dvw;
+        width: 95vw;
+        height: 90vh;
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FloatingWindow {
+        width: 95vw;
+        height: 90vh;
     }
 }
 

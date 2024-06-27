@@ -57,26 +57,40 @@
 #Title {
     color: var(--OnBackground);
     text-transform: uppercase;
-    font-size: 6dvw;
+    font-size: 6vw;
 }
 
 #Subtitle {
     color: var(--Primary);
     text-transform: uppercase;
-    font-size: 1.5dvw;
+    font-size: 2vw;
 }
 
 #Icons {
     width: 100%;
     margin-top: 2%;
-    font-size: 3dvw;
+    font-size: 3vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    
+
+}
+
+@media screen and (max-width: 767px) {
+    #Title {
+        font-size: 9vw;
+    }
+
+    #Subtitle {
+        font-size: 4vw;
+    }
+
+    #Icons {
+        font-size: 6vw;
+    }
 }
 
 #Icons a {
@@ -460,8 +474,8 @@ img:nth-child(5) {
     }
 
     #AboutCard {
-        width: 85ddvw;
-        height: 70ddvh;
+        width: 85dvw;
+        height: 75dvh;
     }
     
     #AboutCard:hover #AboutCardInfoContainer {
