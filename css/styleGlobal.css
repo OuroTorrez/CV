@@ -19,8 +19,8 @@ h1, h2, h3, h4, h5, h6 {
 
 span, p, ul, li, i, a{
 	font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    letter-spacing: 1.3px;
+	font-weight: 400;
+	letter-spacing: 1.3px;
 }
 
 /* General Page Styles */
@@ -186,7 +186,7 @@ i {
 }
    
 .ButtonIcon {
-    -webkit-text-stroke: 1px;
+    -webkit-text-stroke: 0px;
     position: absolute;
     inset: 0;
     background-color: var(--Secondary);
@@ -199,7 +199,7 @@ i {
 
 .ButtonIcon i {
     text-shadow: none;
-    font-size: 110%;
+    /* font-size: 110%; */
 }
    
 .PrimaryButton:hover .ButtonText {
