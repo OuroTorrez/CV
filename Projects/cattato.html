@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cattato - Adrian Torrez</title>
+    <meta name="description"
+        content="Collection about Adrian Torrez professional credentials. Video game dev engenieering graduate with knowledge on web development.">
+    <link rel="stylesheet" href="../css/styleGlobal.css">
+    <link rel="stylesheet" href="../css/styleProject.css">
+
+    <!-- Font awesome integration -->
+    <script src="https://kit.fontawesome.com/e80de1fade.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap integration -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="https://picsum.photos/16/16" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://picsum.photos/32/32" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://picsum.photos/48/48" sizes="48x48">
+    <link rel="icon" type="image/png" href="https://picsum.photos/64/64" sizes="64x64">
+    <link rel="icon" type="image/png" href="https://picsum.photos/192/192" sizes="192x192">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google font integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sono:wght,MONO@200..800,0..1&display=swap" rel="stylesheet">
+</head>
+<!-- Header Menu -->
+<header id="HeaderMenuContainer">
+    <div id="HeaderMenu">
+        <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('../projects.html')"
+            class="delayedLink HeaderMenuItem HeaderMenuItemActive">
+            <span class="FirstLetter">P</span>rojects
+        </a>
+        <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('../index.html')"
+            class="delayedLink HeaderMenuItem">
+            <span class="FirstLetter">H</span>ome
+        </a>
+        <a onclick="AppearLoadingScreen()" href="javascript:delayedLink('../about.html')"
+            class="delayedLink HeaderMenuItem">
+            <span class="FirstLetter">A</span>bout <span class="FirstLetter">M</span>e
+        </a>
+    </div>
+</header>
+<body>
+    <div id="ProjectTitle">
+        <span>2022</span>
+        <h1>Cattato</h1>
+    </div>
+    <div id="ProjectInfo">
+        <div id="ProjectDetails">
+            <div class="ProjectDetail">
+                <h3><span class="FirstLetter">D</span>ate</h3>
+                <div class="ProjectDetailBorder"></div>
+                <ul>
+                    <li>Somewhere in 2022</li>
+                </ul>
+            </div>
+            <div class="ProjectDetail">
+                <h3><span class="FirstLetter">R</span>ole</h3>
+                <div class="ProjectDetailBorder"></div>
+                <p>Multifunctional</p>
+            </div>
+            <div class="ProjectDetail">
+                <h3><span class="FirstLetter">M</span>ade <span class="FirstLetter">W</span>ith</h3>
+                <div class="ProjectDetailBorder"></div>
+                <ul>
+                    <li>Unity</li>
+                    <li>C#</li>
+                </ul>
+            </div>
+        </div>
+        <div id="ProjectOverview">
+            <p>
+                Unity is a popular game engine used for developing 2D and 3D games, mostly used for indie game development and my personal favorite.
+                Cattato is a school project inspired by games like Brotato and Vampire Survivors, games that created or defined a new genre of
+                games called Survivors-like or Bullet Heaven, where the player has to survive waves of enemies while collecting loot and upgrades 
+                to become stronger.
+            </p>
+            <p>
+                This was a super short project and the idea was to practice spawning enemies, creating a loot system and a simple upgrade system.
+                The game was made in Unity using C# scripts and assets created by members of the development team. Due to the short time
+                frame, the games was not really polished and finished (it´s playable), but it was a fun experience and a good practice although i would like to
+                improve it in the future.
+            </p>
+            <p>
+                The main challenge was to organize and manage the team, since we were all working on different parts of the game and we had to make 
+                sure that everything was working together, and that we were all on the same page. 
+            </p>
+        </div>
+    </div>
+    <div id="ProjectMore" class="ProjectSmallSection">
+        <h1><span class="FirstLetter">W</span>ant to know more?</h1>
+        <h3>Get in touch. I can tell you more about this project.</h3>
+            <button class="PrimaryButton" onclick="window.location.href='../about.html#AboutContact'">
+                <div class="ButtonText">
+                    <span><span class="FirstLetter">C</span>ontact me</span>
+                </div>
+                <div class="ButtonIcon">
+                    <i class="fa-regular fa-comments"></i>
+                </div>
+            </button>
+    </div>
+    <div id="ProjectDowload" class="ProjectSmallSection">
+        <h1><span class="FirstLetter">W</span>ant to try it?</h1>
+        <h3>Feel free to download this mini-game on GitHub, remember to have Unity installed.</h3>
+        <button class="PrimaryButton" onclick="window.open('https://github.com/OuroTorrez/Cattato', '_blank')">
+            <div class="ButtonText">
+                <span><span class="FirstLetter">D</span>ownload</span>
+            </div>
+            <div class="ButtonIcon">
+                <i class="bi bi-cloud-download-fill"></i>
+            </div>
+        </button>
+    </div>
+    <p id="Separation"></p>
+    <div id="Footer">
+        <div id="FooterMe">
+            <span><span class="FirstLetter">A</span>drian <span>T</span>orrez | </span>
+            <span><span class="FirstLetter">M</span>ade <span class="FirstLetter">W</span>ith ❤ <span class="FirstLetter">2024</span> | </span>
+            <a href="../about.html"><span class="FirstLetter">G</span>et <span class="FirstLetter">I</span>n <span class="FirstLetter">T</span>ouch</a>
+        </div>
+        <div id="FooterIcons">
+            <a href="https://www.linkedin.com/in/adrian-torrez-beltran/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/OuroTorrez" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto: mineadriantorrez@gmail.com" target="_blank"><i class="bi bi-envelope-at"></i></a>
+            <a href="https://codepen.io/Towerrz" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    //Delayed link
+    function delayedLink(URL) {
+        setTimeout(function () { window.location = URL }, 510);
+    }
+</script>
